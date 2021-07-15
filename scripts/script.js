@@ -1,12 +1,12 @@
+import { progress_bar } from "./progress-bar.js";
+import { bookmark } from "./bookmark.js";
+import { cards } from "./cards.js"
+// import { unbookmark } from "./bookmark.js";
+
 let d = document;
 
-(function() {
-    let container = d.querySelector('.amount').textContent.replace(',', '').substring(1);
-    console.log(container);
-    let total = d.querySelector('.total').textContent.replace(',', '').substring(4).replace(' backed', '');
-    container = parseFloat(container);
-    total = parseFloat(total);
-    console.log(container);
-    console.log(total);
+//Hay que poner .js para que funcione la importación:
 
-}());
+progress_bar();
+bookmark();
+cards();

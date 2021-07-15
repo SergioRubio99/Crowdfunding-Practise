@@ -184,11 +184,11 @@ body {
     width: 176px;
     margin-right: 47px;
     border-radius: 50px;
-    color: rgb(90, 90, 90);
+    color: rgb(116, 116, 116);
     background-color: rgb(230, 230, 230);
     font-family: 'CommissionerBold';
     margin-top: 15px;
-    font-size: 17px;
+    font-size: 16px;
     height: 55px;
     cursor: pointer;
     padding-top: 0px;
@@ -217,11 +217,34 @@ body {
 .bookmark_btn_inside img {
     position: relative;
     display: flex;
-    font-family: "WebSymbolsRegular";
     max-width: 21px;
     margin-left: 16.9px;
     margin-right: 0px;
     margin-top: 15px;
+}
+
+
+/* bookmark_btn.toggleAttribute("bookmark-btn_bookmarked");
+bookmark_btn_inside.toggleAttribute('bookmark_btn_inside-bookmarked');
+img.toggleAttribute('img-bookmarked');
+p.toggleAttribute('p-bookmarked'); */
+
+p[p-bookmarked] {
+    color: hsl(176, 50%, 36%);
+    content: "Joe's Task:";
+    margin-left: 10px;
+}
+
+button[bookmark_btn_inside-bookmarked] {
+    margin-right: 5px;
+}
+
+button[bookmark-btn-bookmarked] {
+    width: 190px;
+}
+
+div[bookmark_btn_inside-bookmarked] {
+    background-color: hsl(176, 50%, 36%);
 }
 
 
@@ -322,7 +345,6 @@ body {
 .progress {
     height: 100%;
     border-radius: 10px;
-    width: 89.914%;
     background-color: lightseagreen;
     margin: 0px;
 }
@@ -638,6 +660,80 @@ body {
 
 .card3 div:nth-child(3) button:hover {
     background-color: hsl(176, 50%, 36%);
+}
+
+.card1-button,
+.card2-button,
+.card3-button {
+    cursor: pointer;
+}
+
+
+/* TARJETA FLOTANTE */
+
+.dFragm {
+    position: absolute;
+    margin: 0px auto;
+    border-radius: 10px;
+    width: 713px;
+    height: 50%;
+    top: 1000px;
+    left: 596px;
+    background-color: rgb(155, 155, 155);
+    opacity: 1;
+}
+
+.dFragm-main_title {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-left: 50px;
+    font-family: 'CommissionerBold';
+    font-weight: 100;
+    margin-top: 35px;
+}
+
+.dFragm-p {
+    font-family: 'Commissioner';
+    color: rgb(131, 131, 131);
+    margin-left: 50px;
+    line-height: 1.6;
+    font-size: 15.4px;
+    margin-bottom: 20px;
+}
+
+.dFragm-card1 {
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid blue;
+}
+
+.dFragm-card1>input {
+    border: 1px solid lightgray;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url(https://cdn.discordapp.com/attachments/481354865222746117/865176492673728522/favicon_white.png) no-repeat;
+}
+
+.dFragm-card1>label {
+    font-family: 'CommissionerBold';
+    font-size: 15.4px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    top: -1px;
+}
+
+.dFragm-card1>p {
+    font-family: 'Commissioner';
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13.5px;
 }
 
 
