@@ -27,7 +27,7 @@ export function cards() {
     <label class='radio2' for="radio2">
     <input class='radio2__input' type="radio" id='radio2' name="fav_language" value="HTML">
     <div class='radio2__radio'></div>
-    Pledge with no reward
+    Bamboo Stand
     </label><br>
     <p>You get an ergonomic stand made of natural bamboo.You've helped us launch our promotional campaign, and you'll be added to a special Backer member list</p>
     </div>
@@ -49,10 +49,14 @@ export function cards() {
 
     let $input1 = d.querySelector('.radio1__input');
     let $dFragmCard1 = d.querySelector(".dFragm-card1");
-    var $input1_continue = d.createElement('div');
-    var $input1_btn = d.createElement('button');
+    let $input1_continue = d.createElement('div');
+    let $input1_btn = d.createElement('button');
+
 
     $input1.addEventListener('change', function() {
+        if ($dFragmCard2.contains($input2_continue)) {
+            $input2_continue.remove();
+        }
         // var $dFragmCard1 = d.querySelector(".dFragm-card1");
         // var $input1_continue = d.createElement('div');
         $input1_continue.classList.add('input1_continue');
@@ -62,14 +66,32 @@ export function cards() {
         $input1_btn.classList.add('input1_btn');
         $input1_btn.setAttribute('content', 'Continue');
         $input1_btn.textContent = 'Continue';
+
     });
 
 
     let $input2 = d.querySelector('.radio2__input');
+    let $dFragmCard2 = d.querySelector(".dFragm-card2");
+    let $input2_continue = d.createElement('div');
+    let $span1_02 = d.createElement('span');
+    let $input2_btn = d.createElement('button');
+    let $input2_number = d.createElement('input')
+
     $input2.addEventListener('change', function() {
         if ($dFragmCard1.contains($input1_continue)) {
             $input1_continue.remove();
         }
+        $input2_continue.appendChild($span1_02);
+        $dFragmCard2.appendChild($input2_continue);
+        $input2_continue.appendChild($input2_btn);
+        $input2_continue.classList.add('input2_continue');
+        $input2_btn.classList.add('input2_btn');
+        $input2_btn.setAttribute('content', 'Continue');
+        $input2_btn.textContent = 'Continue';
+        $span1_02.textContent = 'Enter yout pledge';
+        $span1_02.classList.add('span1_02');
+        $input2_number.setAttribute('type', 'number');
+        $input2_continue.appendChild($input2_number);
     });
 }
 

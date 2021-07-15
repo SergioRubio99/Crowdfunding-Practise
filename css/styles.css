@@ -832,7 +832,7 @@ div[bookmark_btn_inside-bookmarked] {
     padding: 2px;
 }
 
-.radio2:hover .radio1__radio {
+.radio2:hover .radio2__radio {
     border-color: hsl(176, 45%, 47%);
 }
 
@@ -851,7 +851,7 @@ div[bookmark_btn_inside-bookmarked] {
     transition: transform 0.15s;
 }
 
-.radio2__input:checked+.radio1__radio::after {
+.radio2__input:checked+.radio2__radio::after {
     transform: scale(1);
 }
 
@@ -868,7 +868,7 @@ div[bookmark_btn_inside-bookmarked] {
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .input2_btn {
@@ -889,6 +889,11 @@ div[bookmark_btn_inside-bookmarked] {
 
 .input2_btn:hover {
     background-color: hsl(176, 64%, 33%);
+}
+
+.span1_02 {
+    font-family: 'Commissioner';
+    margin: 0px;
 }
 
 
