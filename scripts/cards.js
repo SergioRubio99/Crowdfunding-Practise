@@ -20,6 +20,26 @@ export function cards() {
     <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
 
     </div>
+    
+    
+    <div class='dFragm-card2'>
+
+    <label class='radio2' for="radio2">
+    <input class='radio2__input' type="radio" id='radio2' name="fav_language" value="HTML">
+    <div class='radio2__radio'></div>
+    Pledge with no reward
+    </label><br>
+    <p>You get an ergonomic stand made of natural bamboo.You've helped us launch our promotional campaign, and you'll be added to a special Backer member list</p>
+    </div>
+
+    
+    <div class='dFragm-card3'>
+
+    </div>
+
+    <div class='dFragm-card4'>
+
+    </div>
     `
     $dFragm.classList.add('dFragm');
 
@@ -28,13 +48,16 @@ export function cards() {
     // Ahora vamos a hacer que al seleccionar el input de la tarjeta, se añada un div con el botón continuar a .dFragm-card1:
 
     let $input1 = d.querySelector('.radio1__input');
+    let $dFragmCard1 = d.querySelector(".dFragm-card1");
+    var $input1_continue = d.createElement('div');
+    var $input1_btn = d.createElement('button');
+
     $input1.addEventListener('change', function() {
-        console.log('wrtg');
-        let $dFragmCard1 = d.querySelector(".dFragm-card1");
-        let $input1_continue = d.createElement('div');
+        // var $dFragmCard1 = d.querySelector(".dFragm-card1");
+        // var $input1_continue = d.createElement('div');
         $input1_continue.classList.add('input1_continue');
         $dFragmCard1.appendChild($input1_continue);
-        let $input1_btn = d.createElement('button');
+        // var $input1_btn = d.createElement('button');
         $input1_continue.appendChild($input1_btn);
         $input1_btn.classList.add('input1_btn');
         $input1_btn.setAttribute('content', 'Continue');
@@ -42,6 +65,12 @@ export function cards() {
     });
 
 
+    let $input2 = d.querySelector('.radio2__input');
+    $input2.addEventListener('change', function() {
+        if ($dFragmCard1.contains($input1_continue)) {
+            $input1_continue.remove();
+        }
+    });
 }
 
 
