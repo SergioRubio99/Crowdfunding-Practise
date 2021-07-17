@@ -1,0 +1,606 @@
+.floating_card_zone {
+    height: 1px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 62);
+}
+
+
+/* 
+Estilos a aplicar con Javascript: 
+
+position: fixed;
+height: 100%; 
+width: 100%;
+background-color: rgba(0, 0, 0, 0.6); */
+
+
+/* TARJETA FLOTANTE */
+
+.dFragm {
+    position: relative;
+    margin: 0px auto;
+    border-radius: 10px;
+    width: 713px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid green;
+    opacity: 1;
+    padding-bottom: 50px;
+}
+
+.dFragm-main_title {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-left: 50px;
+    font-family: 'CommissionerBold';
+    font-weight: 100;
+    margin-top: 35px;
+}
+
+.dFragm-p {
+    font-family: 'Commissioner';
+    color: rgb(131, 131, 131);
+    margin-left: 50px;
+    line-height: 1.6;
+    font-size: 15.4px;
+    margin-bottom: 20px;
+}
+
+
+/* INICIO PRIMERA CARTA FLOTANTE */
+
+.dFragm-card1 {
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid blue;
+}
+
+
+/*Cómo hacer los botones: https://bit.ly/3enHuyB */
+
+.radio1 {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Commissioner';
+}
+
+.radio1__input {
+    display: none;
+}
+
+.radio1__radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio1:hover .radio1__radio {
+    border-color: hsl(176, 45%, 47%);
+}
+
+.radio1:hover {
+    color: hsl(176, 45%, 47%);
+}
+
+.radio1__radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsl(176, 64%, 33%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio1__input:checked+.radio1__radio::after {
+    transform: scale(1);
+}
+
+.dFragm-card1>p {
+    font-family: 'Commissioner';
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.input1_continue {
+    border-top: 1px solid lightgray;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.input1_btn {
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-family: 'Commissioner';
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.input1_btn:hover {
+    background-color: hsl(176, 64%, 33%);
+}
+
+
+/* FIN PRIMERA CARTA FLOTANTE */
+
+
+/* SEGUNDA CARTA FLOTANTE */
+
+
+/*Cómo hacer los botones: https://bit.ly/3enHuyB */
+
+.radio2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Commissioner';
+}
+
+.radio2__input {
+    display: none;
+}
+
+.radio2__radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+    margin-left: 0px;
+}
+
+.radio2:hover .radio2__radio {
+    border-color: hsl(176, 45%, 47%);
+}
+
+.radio2:hover {
+    color: hsl(176, 45%, 47%);
+}
+
+.radio2__radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsl(176, 64%, 33%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio2__input:checked+.radio2__radio::after {
+    transform: scale(1);
+}
+
+.Bamboo_stand {
+    margin-left: 0px;
+}
+
+.dFragm-card2 {
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid blue;
+}
+
+.card2_span {
+    color: hsl(176, 76%, 46%);
+    font-family: 'commissionerBold';
+    font-weight: 100;
+    margin-right: 230px;
+}
+
+.card2_number {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+    font-family: 'CommissionerBold';
+    color: black;
+    /* margin-right: -165px; */
+}
+
+.card2_left {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(190, 190, 190);
+}
+
+.dFragm-card2>p {
+    font-family: 'Commissioner';
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.input2_continue {
+    border-top: 1px solid lightgray;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input2_btn {
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-family: 'Commissioner';
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.input2_btn:hover {
+    background-color: hsl(176, 64%, 33%);
+}
+
+.span1_02 {
+    font-family: 'Commissioner';
+    margin: 0px;
+}
+
+.input2_number {
+    margin-right: 10px;
+    justify-self: flex-end;
+    width: 70px;
+    height: 40px;
+    font-family: 'CommissionerBold';
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-weight: 100;
+    color: black;
+}
+
+.input2_number:focus {
+    border: 1px solid lightgray;
+}
+
+.dollar {
+    font-family: 'CommissionerBold';
+    margin: 0px auto;
+    margin-right: auto;
+    justify-self: flex-start;
+    margin-right: -268px;
+    z-index: 1;
+    color: rgb(146, 146, 146)
+}
+
+
+/* FIN DE LA SEGUNDA CARTA FLOTANTE */
+
+
+/* TERCERA CARTA FLOTANTE */
+
+.radio3 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Commissioner';
+}
+
+.radio3__input {
+    display: none;
+}
+
+.radio3__radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+    margin-left: 0px;
+}
+
+.radio3:hover .radio3__radio {
+    border-color: hsl(176, 45%, 47%);
+}
+
+.radio3:hover {
+    color: hsl(176, 45%, 47%);
+}
+
+.radio3__radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsl(176, 64%, 33%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio3__input:checked+.radio3__radio::after {
+    transform: scale(1);
+}
+
+.Bamboo_stand {
+    margin-left: 0px;
+}
+
+.dFragm-card3 {
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid blue;
+}
+
+.card3_span {
+    color: hsl(176, 76%, 46%);
+    font-family: 'commissionerBold';
+    font-weight: 100;
+    margin-right: 230px;
+}
+
+.card3_number {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+    font-family: 'CommissionerBold';
+    color: black;
+    /* margin-right: -165px; */
+}
+
+.card3_left {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(190, 190, 190);
+}
+
+.dFragm-card3>p {
+    font-family: 'Commissioner';
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.input3_continue {
+    border-top: 1px solid lightgray;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input3_btn {
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-family: 'Commissioner';
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.input3_btn:hover {
+    background-color: hsl(176, 64%, 33%);
+}
+
+.span1_03 {
+    font-family: 'Commissioner';
+    margin: 0px;
+}
+
+.input3_number {
+    margin-right: 10px;
+    justify-self: flex-end;
+    width: 70px;
+    height: 40px;
+    font-family: 'CommissionerBold';
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-weight: 100;
+    color: black;
+}
+
+.input3_number:focus {
+    border: 1px solid lightgray;
+}
+
+.dollar {
+    font-family: 'CommissionerBold';
+    margin: 0px auto;
+    margin-right: auto;
+    justify-self: flex-start;
+    margin-right: -268px;
+    z-index: 1;
+    color: rgb(146, 146, 146)
+}
+
+
+/* FIN DE LA TERCERA CARTA FLOTANTE */
+
+
+/* INICIO DE LA CUARTA CARTA FLOTANTE */
+
+.radio4 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Commissioner';
+}
+
+.radio4__input {
+    display: none;
+}
+
+.radio4__radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+    margin-left: 0px;
+}
+
+.radio4:hover .radio4__radio {
+    border-color: hsl(176, 45%, 47%);
+}
+
+.radio4:hover {
+    color: hsl(176, 45%, 47%);
+}
+
+.radio4__radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsl(176, 64%, 33%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio4__input:checked+.radio4__radio::after {
+    transform: scale(1);
+}
+
+.Bamboo_stand {
+    margin-left: 0px;
+}
+
+.dFragm-card4 {
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid blue;
+}
+
+.card4_span {
+    color: hsl(176, 76%, 46%);
+    font-family: 'commissionerBold';
+    font-weight: 100;
+    margin-right: 230px;
+}
+
+.card4_number {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+    font-family: 'CommissionerBold';
+    color: black;
+    /* margin-right: -165px; */
+}
+
+.card4_left {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(190, 190, 190);
+}
+
+.dFragm-card4>p {
+    font-family: 'Commissioner';
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.input4_continue {
+    border-top: 1px solid lightgray;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.input4_btn {
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-family: 'Commissioner';
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.input4_btn:hover {
+    background-color: hsl(176, 64%, 33%);
+}
+
+.span1_04 {
+    font-family: 'Commissioner';
+    margin: 0px;
+}
+
+.input4_number {
+    margin-right: 10px;
+    justify-self: flex-end;
+    width: 70px;
+    height: 40px;
+    font-family: 'CommissionerBold';
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-weight: 100;
+    color: black;
+}
+
+.input4_number:focus {
+    border: 1px solid lightgray;
+}
+
+.dollar {
+    font-family: 'CommissionerBold';
+    margin: 0px auto;
+    margin-right: auto;
+    justify-self: flex-start;
+    margin-right: -268px;
+    z-index: 1;
+    color: rgb(146, 146, 146)
+}
+
+
+/* FIN DE LA CUARTA CARTA FLOTANTE */
