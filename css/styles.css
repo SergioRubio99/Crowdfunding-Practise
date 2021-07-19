@@ -432,7 +432,7 @@ div[bookmark_btn_inside-bookmarked] {
     letter-spacing: -0.4px;
     color: rgb(23, 165, 151);
     margin-left: 0px;
-    margin-right: 45px;
+    margin-right: 19px;
 }
 
 .card1 div:nth-child(2) {
@@ -516,7 +516,9 @@ div[bookmark_btn_inside-bookmarked] {
     font-family: 'Commissioner';
     color: rgb(23, 165, 151);
     margin-left: 0px;
-    margin-right: 45px;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .card2 div:nth-child(2) {
@@ -602,7 +604,8 @@ div[bookmark_btn_inside-bookmarked] {
     font-family: 'Commissioner';
     color: rgb(23, 165, 151);
     margin-left: 0px;
-    margin-right: 45px;
+    margin-right: 20px;
+    font-size: 15px;
 }
 
 .card3 div:nth-child(2) {

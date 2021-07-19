@@ -57,9 +57,12 @@ export function cards() {
     </div>
     `
     $dFragm.classList.add('dFragm');
+    var $dFragm_position = 950;
 
-    let $floating_card_zone = d.querySelector('.floating_card_zone')
-    $floating_card_zone.appendChild($dFragm);
+    $dFragm.setAttribute('style', `top:${$dFragm_position}px`)
+
+    let $no_floating_card_zone = d.querySelector('.no_floating_card_zone');
+    $no_floating_card_zone.appendChild($dFragm);
     // Ahora vamos a hacer que al seleccionar el input de la tarjeta, se añada un div con el botón continuar a .dFragm-card1:
 
     let $input1 = d.querySelector('.radio1__input');
@@ -209,6 +212,49 @@ export function cards() {
         $_03.textContent = '$';
         $_03.classList.add('dollar');
     });
+
+    $card3_button.addEventListener('click', function() {
+        console.log($dFragm_position);
+        var $card3_interval = setInterval(() => {
+            $dFragm_position -= 100;
+            $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+        }, 1);
+
+        var $card3_if_interval = setInterval(() => {
+            if ((parseInt($dFragm.style.top.substring(0, 3))) < 100) {
+                clearInterval($card3_interval);
+            }
+        }, 1);
+
+    });
+
+    $card2_button.addEventListener('click', function() {
+        console.log($dFragm_position);
+        var $card2_interval = setInterval(() => {
+            $dFragm_position -= 100;
+            $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+        }, 10);
+
+        var $card2_if_interval = setInterval(() => {
+            if ((parseInt($dFragm.style.top.substring(0, 3))) < 100) {
+                clearInterval($card2_interval);
+            }
+        }, 10);
+
+    });
+    $card1_button.addEventListener('click', function() {
+        console.log($dFragm_position);
+        var $card1_interval = setInterval(() => {
+            $dFragm_position -= 100;
+            $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+        }, 10);
+
+        var $card1_if_interval = setInterval(() => {
+            if ((parseInt($dFragm.style.top.substring(0, 3))) < 100) {
+                clearInterval($card1_interval);
+            }
+        }, 1);
+    });
 }
 
 
@@ -226,3 +272,32 @@ export function cards() {
 //     beforeend (ultimo hijo)
 //     afterend (hermano siguiente)
 // $cards.insertAdjacentElement('afterbegin', $newCard);
+
+
+
+
+// ANIMACIÓN DE LAS TARJETAS
+
+
+let $no_floating_card_zone = d.querySelector('.no_floating_card_zone');
+let $card1_button = d.querySelector('.card1-button');
+let $card2_button = d.querySelector('.card2-button');
+let $card3_button = d.querySelector('.card3-button');
+
+export function animation_btn() {
+
+    $card1_button.addEventListener('click', function() {
+        $no_floating_card_zone.classList.remove('no_floating_card_zone');
+        $no_floating_card_zone.classList.add('floating_card_zone');
+    });
+    $card2_button.addEventListener('click', function() {
+        $no_floating_card_zone.classList.remove('no_floating_card_zone');
+        $no_floating_card_zone.classList.add('floating_card_zone');
+    });
+    $card3_button.addEventListener('click', function() {
+        $no_floating_card_zone.classList.remove('no_floating_card_zone');
+        $no_floating_card_zone.classList.add('floating_card_zone');
+
+    });
+
+}

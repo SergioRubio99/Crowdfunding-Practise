@@ -1,7 +1,14 @@
-.floating_card_zone {
+.no_floating_card_zone {
     height: 1px;
     overflow: hidden;
-    background-color: rgb(255, 255, 62);
+    background-color: rgba(0, 0, 0);
+}
+
+.floating_card_zone {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 
