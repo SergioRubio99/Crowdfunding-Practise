@@ -200,8 +200,8 @@ body {
 
 .bookmark_btn p {
     display: flex;
-    align-items: center;
     margin-right: 20px;
+    align-self: center;
 }
 
 .bookmark_btn_inside {

@@ -25,23 +25,24 @@ background-color: rgba(0, 0, 0, 0.6); */
 
 .dFragm {
     position: relative;
-    margin: 0px auto;
+    margin: -50px auto;
     border-radius: 10px;
     width: 713px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid green;
+    border: 1px solid rgb(182, 182, 182);
     opacity: 1;
     padding-bottom: 50px;
+    /* height: 89%; */
 }
 
 .dFragm-main_title {
     font-size: 1.3em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: start;
     margin-left: 50px;
     font-family: 'CommissionerBold';
     font-weight: 100;
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 .dFragm-p {
@@ -50,7 +51,20 @@ background-color: rgba(0, 0, 0, 0.6); */
     margin-left: 50px;
     line-height: 1.6;
     font-size: 15.4px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.close_btn {
+    font-family: 'WebSymbolsRegular';
+    font-weight: 800;
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    float: right;
+    display: block;
+    cursor: pointer;
+    margin: 25px 30px auto auto;
+    color: rgb(148, 148, 148);
 }
 
 
@@ -60,7 +74,9 @@ background-color: rgba(0, 0, 0, 0.6); */
     width: 85%;
     max-height: 50%;
     padding: 15px, 10px, 15px, 10px;
-    border: 1px solid blue;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 7px;
+    margin-bottom: 20px;
 }
 
 
@@ -70,7 +86,9 @@ background-color: rgba(0, 0, 0, 0.6); */
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    font-family: 'Commissioner';
+    font-family: 'CommissionerBold';
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .radio1__input {
@@ -114,8 +132,12 @@ background-color: rgba(0, 0, 0, 0.6); */
     font-family: 'Commissioner';
     margin-top: 15px;
     margin-bottom: 30px;
-    font-weight: 500;
-    font-size: 13.5px;
+    font-size: 13px;
+    margin-left: 60px;
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: rgb(146, 146, 146)
 }
 
 .input1_continue {
@@ -133,12 +155,13 @@ background-color: rgba(0, 0, 0, 0.6); */
     font-size: 13px;
     font-weight: bold;
     border-radius: 50px;
-    width: 150px;
+    width: 120px;
     height: 40px;
     border: none;
     cursor: pointer;
     margin: 0px;
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
     cursor: pointer;
 }
 
@@ -155,15 +178,27 @@ background-color: rgba(0, 0, 0, 0.6); */
 
 /*Cómo hacer los botones: https://bit.ly/3enHuyB */
 
+.dFragm-card2 {
+    border-radius: 7px;
+    margin-bottom: 20px;
+    width: 85%;
+    max-height: 50%;
+    padding: 15px, 10px, 15px, 10px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
 .radio2 {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-family: 'Commissioner';
+    font-family: 'CommissionerBold';
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 30px;
 }
 
-.radio2__input {
-    display: none;
+.radio2:hover {
+    color: hsl(176, 45%, 47%);
 }
 
 .radio2__radio {
@@ -181,8 +216,8 @@ background-color: rgba(0, 0, 0, 0.6); */
     border-color: hsl(176, 45%, 47%);
 }
 
-.radio2:hover {
-    color: hsl(176, 45%, 47%);
+.radio2__input {
+    display: none;
 }
 
 .radio2__radio::after {
@@ -204,18 +239,11 @@ background-color: rgba(0, 0, 0, 0.6); */
     margin-left: 0px;
 }
 
-.dFragm-card2 {
-    width: 85%;
-    max-height: 50%;
-    padding: 15px, 10px, 15px, 10px;
-    border: 1px solid blue;
-}
-
 .card2_span {
     color: hsl(176, 76%, 46%);
     font-family: 'commissionerBold';
     font-weight: 100;
-    margin-right: 230px;
+    margin-right: 186px;
 }
 
 .card2_number {
@@ -235,10 +263,14 @@ background-color: rgba(0, 0, 0, 0.6); */
 
 .dFragm-card2>p {
     font-family: 'Commissioner';
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 13.5px;
+    margin-left: 61px;
+    line-height: 20px;
+    color: rgb(146, 146, 146);
+    letter-spacing: 0.5px;
 }
 
 .input2_continue {
@@ -249,6 +281,40 @@ background-color: rgba(0, 0, 0, 0.6); */
     justify-content: space-between;
 }
 
+.span1_02 {
+    font-family: 'Commissioner';
+    margin: 0px;
+    margin-left: 58px;
+    color: rgb(146, 146, 146);
+}
+
+.input2_number {
+    margin-right: 12px;
+    width: 70px;
+    height: 40px;
+    font-family: 'CommissionerBold';
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-weight: 100;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input2_number:focus {
+    border: 1px solid lightgray;
+}
+
+.dollar_card2 {
+    font-family: 'CommissionerBold';
+    justify-self: flex-start;
+    margin-right: -234px;
+    z-index: 1;
+    color: rgb(146, 146, 146)
+}
+
 .input2_btn {
     background-color: hsl(176, 50%, 47%);
     color: white;
@@ -256,7 +322,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     font-size: 13px;
     font-weight: bold;
     border-radius: 50px;
-    width: 150px;
+    width: 120px;
     height: 40px;
     border: none;
     cursor: pointer;
@@ -269,39 +335,6 @@ background-color: rgba(0, 0, 0, 0.6); */
     background-color: hsl(176, 64%, 33%);
 }
 
-.span1_02 {
-    font-family: 'Commissioner';
-    margin: 0px;
-}
-
-.input2_number {
-    margin-right: 10px;
-    justify-self: flex-end;
-    width: 70px;
-    height: 40px;
-    font-family: 'CommissionerBold';
-    border: 1px solid lightgray;
-    background-color: white;
-    border-radius: 30px;
-    padding-left: 30px;
-    font-weight: 100;
-    color: black;
-}
-
-.input2_number:focus {
-    border: 1px solid lightgray;
-}
-
-.dollar {
-    font-family: 'CommissionerBold';
-    margin: 0px auto;
-    margin-right: auto;
-    justify-self: flex-start;
-    margin-right: -268px;
-    z-index: 1;
-    color: rgb(146, 146, 146)
-}
-
 
 /* FIN DE LA SEGUNDA CARTA FLOTANTE */
 
@@ -309,10 +342,11 @@ background-color: rgba(0, 0, 0, 0.6); */
 /* TERCERA CARTA FLOTANTE */
 
 .radio3 {
+    padding-top: 30px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-family: 'Commissioner';
+    font-family: 'CommissionerBold';
 }
 
 .radio3__input {
@@ -328,6 +362,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     box-sizing: border-box;
     padding: 2px;
     margin-left: 0px;
+    margin-left: 29px;
 }
 
 .radio3:hover .radio3__radio {
@@ -358,17 +393,19 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .dFragm-card3 {
+    border-radius: 7px;
+    margin-bottom: 20px;
     width: 85%;
     max-height: 50%;
     padding: 15px, 10px, 15px, 10px;
-    border: 1px solid blue;
+    border: 1px solid rgb(180, 180, 180);
 }
 
 .card3_span {
     color: hsl(176, 76%, 46%);
     font-family: 'commissionerBold';
     font-weight: 100;
-    margin-right: 230px;
+    margin-right: 168px;
 }
 
 .card3_number {
@@ -382,16 +419,20 @@ background-color: rgba(0, 0, 0, 0.6); */
 
 .card3_left {
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     color: rgb(190, 190, 190);
 }
 
 .dFragm-card3>p {
     font-family: 'Commissioner';
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 13.5px;
+    margin-left: 49px;
+    line-height: 20px;
+    color: rgb(146, 146, 146);
+    letter-spacing: 0.5px;
 }
 
 .input3_continue {
@@ -409,7 +450,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     font-size: 13px;
     font-weight: bold;
     border-radius: 50px;
-    width: 150px;
+    width: 120px;
     height: 40px;
     border: none;
     cursor: pointer;
@@ -425,6 +466,8 @@ background-color: rgba(0, 0, 0, 0.6); */
 .span1_03 {
     font-family: 'Commissioner';
     margin: 0px;
+    margin-left: 50px;
+    color: rgb(146, 146, 146);
 }
 
 .input3_number {
@@ -445,12 +488,12 @@ background-color: rgba(0, 0, 0, 0.6); */
     border: 1px solid lightgray;
 }
 
-.dollar {
+.dollar_card3 {
     font-family: 'CommissionerBold';
     margin: 0px auto;
     margin-right: auto;
     justify-self: flex-start;
-    margin-right: -268px;
+    margin-right: -245px;
     z-index: 1;
     color: rgb(146, 146, 146)
 }
@@ -462,10 +505,11 @@ background-color: rgba(0, 0, 0, 0.6); */
 /* INICIO DE LA CUARTA CARTA FLOTANTE */
 
 .radio4 {
+    padding-top: 30px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-family: 'Commissioner';
+    font-family: 'CommissionerBold';
 }
 
 .radio4__input {
@@ -481,6 +525,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     box-sizing: border-box;
     padding: 2px;
     margin-left: 0px;
+    margin-left: 29px;
 }
 
 .radio4:hover .radio4__radio {
@@ -511,17 +556,19 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .dFragm-card4 {
+    border-radius: 7px;
+    margin-bottom: 20px;
     width: 85%;
     max-height: 50%;
     padding: 15px, 10px, 15px, 10px;
-    border: 1px solid blue;
+    border: 1px solid rgb(180, 180, 180);
 }
 
 .card4_span {
     color: hsl(176, 76%, 46%);
     font-family: 'commissionerBold';
     font-weight: 100;
-    margin-right: 230px;
+    margin-right: 130px;
 }
 
 .card4_number {
@@ -535,16 +582,20 @@ background-color: rgba(0, 0, 0, 0.6); */
 
 .card4_left {
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 23px;
     color: rgb(190, 190, 190);
 }
 
 .dFragm-card4>p {
     font-family: 'Commissioner';
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 13.5px;
+    margin-left: 49px;
+    line-height: 20px;
+    color: rgb(146, 146, 146);
+    letter-spacing: 0.5px;
 }
 
 .input4_continue {
@@ -553,7 +604,6 @@ background-color: rgba(0, 0, 0, 0.6); */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
 
 .input4_btn {
@@ -563,7 +613,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     font-size: 13px;
     font-weight: bold;
     border-radius: 50px;
-    width: 150px;
+    width: 120px;
     height: 40px;
     border: none;
     cursor: pointer;
@@ -579,6 +629,8 @@ background-color: rgba(0, 0, 0, 0.6); */
 .span1_04 {
     font-family: 'Commissioner';
     margin: 0px;
+    margin-left: 50px;
+    color: rgb(146, 146, 146);
 }
 
 .input4_number {
@@ -599,12 +651,12 @@ background-color: rgba(0, 0, 0, 0.6); */
     border: 1px solid lightgray;
 }
 
-.dollar {
+.dollar_card4 {
     font-family: 'CommissionerBold';
     margin: 0px auto;
     margin-right: auto;
     justify-self: flex-start;
-    margin-right: -268px;
+    margin-right: -245px;
     z-index: 1;
     color: rgb(146, 146, 146)
 }
