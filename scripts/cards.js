@@ -65,151 +65,42 @@ export function cards() {
     $no_floating_card_zone.appendChild($dFragm);
     // Ahora vamos a hacer que al seleccionar el input de la tarjeta, se añada un div con el botón continuar a .dFragm-card1:
 
-    let $input1 = d.querySelector('.radio1__input');
-    let $dFragmCard1 = d.querySelector(".dFragm-card1");
-    let $input1_continue = d.createElement('div');
-    let $input1_btn = d.createElement('button');
 
 
-    $input1.addEventListener('change', function() {
-        if ($dFragmCard2.contains($input2_continue)) {
-            $input2_continue.remove();
-        }
-        if ($dFragmCard3.contains($input3_continue)) {
-            $input3_continue.remove();
-        }
-
-        if ($dFragmCard4.contains($input4_continue)) {
-            $input4_continue.remove();
-        }
-        $input1_continue.classList.add('input1_continue');
-        $dFragmCard1.appendChild($input1_continue);
-        $input1_continue.appendChild($input1_btn);
-        $input1_btn.classList.add('input1_btn');
-        $input1_btn.setAttribute('content', 'Continue');
-        $input1_btn.textContent = 'Continue';
-
-    });
-
-
-    let $input2 = d.querySelector('.radio2__input');
-    let $dFragmCard2 = d.querySelector(".dFragm-card2");
-    let $input2_continue = d.createElement('div');
-    let $span1_02 = d.createElement('span');
-    let $input2_btn = d.createElement('button');
-    let $input2_number = d.createElement('input');
-    let $ = d.createElement('p');
-
-
-    $input2.addEventListener('change', function() {
-        if ($dFragmCard1.contains($input1_continue)) {
-            $input1_continue.remove();
-        }
-        if ($dFragmCard3.contains($input3_continue)) {
-            $input3_continue.remove();
-        }
-
-        if ($dFragmCard4.contains($input4_continue)) {
-            $input4_continue.remove();
-        }
-        // Creamos el div de abajo del container, y le añadimos el contenido:
-        $input2_continue.appendChild($span1_02);
-        $input2_continue.appendChild($)
-        $input2_continue.appendChild($input2_number);
-        $dFragmCard2.appendChild($input2_continue);
-        $input2_continue.appendChild($input2_btn);
-        $input2_continue.classList.add('input2_continue');
-        $input2_btn.classList.add('input2_btn');
-        $input2_btn.setAttribute('content', 'Continue');
-        $input2_btn.textContent = 'Continue';
-        $span1_02.textContent = 'Enter your pledge';
-        $span1_02.classList.add('span1_02');
-        $input2_number.classList.add('input2_number');
-        $input2_number.value = '25';
-        $.textContent = '$'
-        $.classList.add('dollar_card2')
-    });
-
-
-
-
-
-    let $input3 = d.querySelector('.radio3__input');
-    let $dFragmCard3 = d.querySelector(".dFragm-card3");
-    let $input3_continue = d.createElement('div');
-    let $span1_03 = d.createElement('span');
-    let $input3_btn = d.createElement('button');
-    let $input3_number = d.createElement('input');
-    let $_02 = d.createElement('p');
-
-
-    $input3.addEventListener('change', function() {
-        if ($dFragmCard2.contains($input2_continue)) {
-            $input2_continue.remove();
-        }
-        if ($dFragmCard1.contains($input1_continue)) {
-            $input1_continue.remove();
-        }
-
-        if ($dFragmCard4.contains($input4_continue)) {
-            $input4_continue.remove();
-        }
-        // Creamos el div de abajo del container, y le añadimos el contenido:
-        $input3_continue.appendChild($span1_03);
-        $input3_continue.appendChild($_02)
-        $input3_continue.appendChild($input3_number);
-        $dFragmCard3.appendChild($input3_continue);
-        $input3_continue.appendChild($input3_btn);
-        $input3_continue.classList.add('input3_continue');
-        $input3_btn.classList.add('input3_btn');
-        $input3_btn.setAttribute('content', 'Continue');
-        $input3_btn.textContent = 'Continue';
-        $span1_03.textContent = 'Enter your pledge';
-        $span1_03.classList.add('span1_03');
-        $input3_number.classList.add('input3_number');
-        $input3_number.value = '75';
-        $_02.textContent = '$';
-        $_02.classList.add('dollar_card3');
-    });
-
-    let $input4 = d.querySelector('.radio4__input');
+    // });
+    // ANIMACIÓN DE LA TARJETA FLOTANTE:
     let $dFragmCard4 = d.querySelector(".dFragm-card4");
+    let $input4 = d.querySelector('.radio4__input');
     let $input4_continue = d.createElement('div');
     let $span1_04 = d.createElement('span');
     let $input4_btn = d.createElement('button');
     let $input4_number = d.createElement('input');
     let $_03 = d.createElement('p');
 
+    let $dFragmCard3 = d.querySelector(".dFragm-card3");
+    let $input3 = d.querySelector('.radio3__input');
+    let $input3_continue = d.createElement('div');
+    let $span1_03 = d.createElement('span');
+    let $input3_btn = d.createElement('button');
+    let $input3_number = d.createElement('input');
+    let $_02 = d.createElement('p');
 
-    $input4.addEventListener('change', function() {
-        if ($dFragmCard3.contains($input3_continue)) {
-            $input3_continue.remove();
-        }
-        if ($dFragmCard2.contains($input2_continue)) {
-            $input2_continue.remove();
-        }
-        if ($dFragmCard1.contains($input1_continue)) {
-            $input1_continue.remove();
-        }
+    let $dFragmCard2 = d.querySelector(".dFragm-card2");
+    let $input2 = d.querySelector('.radio2__input');
+    let $input2_continue = d.createElement('div');
+    let $span1_02 = d.createElement('span');
+    let $input2_btn = d.createElement('button');
+    let $input2_number = d.createElement('input');
+    let $ = d.createElement('p');
+    let $dFragmCard1 = d.querySelector(".dFragm-card1");
 
-        // Creamos el div de abajo del container, y le añadimos el contenido:
-        $input4_continue.appendChild($span1_04);
-        $input4_continue.appendChild($_03)
-        $input4_continue.appendChild($input4_number);
-        $dFragmCard4.appendChild($input4_continue);
-        $input4_continue.appendChild($input4_btn);
-        $input4_continue.classList.add('input4_continue');
-        $input4_btn.classList.add('input4_btn');
-        $input4_btn.setAttribute('content', 'Continue');
-        $input4_btn.textContent = 'Continue';
-        $span1_04.textContent = 'Enter your pledge';
-        $span1_04.classList.add('span1_04');
-        $input4_number.classList.add('input4_number');
-        $input4_number.value = '200';
-        $_03.textContent = '$';
-        $_03.classList.add('dollar_card4');
-    });
-    // ANIMACIÓN DE LA TARJETA FLOTANTE:
+    let $input1 = d.querySelector('.radio1__input');
+    // let $dFragmCard1 = d.querySelector(".dFragm-card1");
+    let $input1_continue = d.createElement('div');
+    let $input1_btn = d.createElement('button');
+
+
+
     $card3_button.addEventListener('click', function() {
         console.log($dFragm_position);
         let browserModel = navigator.userAgent;
@@ -227,6 +118,48 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+            let $radio4 = d.getElementById('radio4');
+            $radio4.checked = true;
+
+
+
+            // Creamos el div de abajo del container, y le añadimos el contenido:
+            $input4_continue.appendChild($span1_04);
+            $input4_continue.appendChild($_03)
+            $input4_continue.appendChild($input4_number);
+            $dFragmCard4.appendChild($input4_continue);
+            $input4_continue.appendChild($input4_btn);
+            $input4_continue.classList.add('input4_continue');
+            $input4_btn.classList.add('input4_btn');
+            $input4_btn.setAttribute('content', 'Continue');
+            $input4_btn.textContent = 'Continue';
+            $span1_04.textContent = 'Enter your pledge';
+            $span1_04.classList.add('span1_04');
+            $input4_number.classList.add('input4_number');
+            $input4_number.value = '200';
+            $_03.textContent = '$';
+            $_03.classList.add('dollar_card4');
+
+            if ($radio4.checked === true) {
+                console.log('test')
+                $input1_continue.remove();
+                $input2_continue.remove();
+                $input3_continue.remove();
+            }
+            $input4.addEventListener('change', function() {
+                if ($radio4.checked === true) {
+                    console.log('test')
+                    $input1_continue.remove();
+                    $input2_continue.remove();
+                    $input3_continue.remove();
+                }
+                console.log('input 4')
+            });
+
+
+
+
+
         }
 
         if (chrome.test(browserModel) === true) {
@@ -260,6 +193,10 @@ export function cards() {
 
 
     });
+
+
+    let $radio3 = d.getElementById('radio3');
+    $radio3.checked = true;
 
     $card2_button.addEventListener('click', function() {
         console.log($dFragm_position);
@@ -278,6 +215,65 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 4);
+
+
+            let $radio3 = d.getElementById('radio3');
+            $radio3.checked = true;
+
+            // if ($dFragmCard2.contains($input2_continue)) {
+            //     $input2_continue.remove();
+            // }
+            // if ($dFragmCard1.contains($input1_continue)) {
+            //     $input1_continue.remove();
+            // }
+
+            // if ($dFragmCard4.contains($input4_continue)) {
+            //     $input4_continue.remove();
+            // }
+            // Creamos el div de abajo del container, y le añadimos el contenido:
+            $input3_continue.appendChild($span1_03);
+            $input3_continue.appendChild($_02)
+            $input3_continue.appendChild($input3_number);
+            $dFragmCard3.appendChild($input3_continue);
+            $input3_continue.appendChild($input3_btn);
+            $input3_continue.classList.add('input3_continue');
+            $input3_btn.classList.add('input3_btn');
+            $input3_btn.setAttribute('content', 'Continue');
+            $input3_btn.textContent = 'Continue';
+            $span1_03.textContent = 'Enter your pledge';
+            $span1_03.classList.add('span1_03');
+            $input3_number.classList.add('input3_number');
+            $input3_number.value = '75';
+            $_02.textContent = '$';
+            $_02.classList.add('dollar_card3');
+            if ($radio3.checked === true) {
+                console.log('test')
+                $input2_continue.remove();
+                $input4_continue.remove();
+                $input1_continue.remove();
+            }
+            $input3.addEventListener('change', function() {
+                if ($radio3.checked === true) {
+                    console.log('test')
+                    $input2_continue.remove();
+                    $input4_continue.remove();
+                    $input1_continue.remove();
+                }
+            });
+
+            $input3.addEventListener('change', function() {
+                if ($dFragmCard2.contains($input2_continue)) {
+                    $input2_continue.remove();
+                }
+                if ($dFragmCard1.contains($input1_continue)) {
+                    $input1_continue.remove();
+                }
+
+                if ($dFragmCard4.contains($input4_continue)) {
+                    $input4_continue.remove();
+                }
+            });
+
         }
 
         if (chrome.test(browserModel) === true) {
@@ -310,6 +306,7 @@ export function cards() {
 
 
     });
+
     $card1_button.addEventListener('click', function() {
         console.log($dFragm_position);
         let browserModel = navigator.userAgent;
@@ -327,6 +324,64 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+
+            let $radio2 = d.getElementById('radio2');
+            $radio2.checked = true;
+
+            // CÓDIGO PARA QUE AL PULSAR EL BOTÓN, SELECCIONE UN INPUT DE DENTRO DE LA TARJETA FLOTANTE:
+
+            // let $radio1 = d.getElementById('radio1');
+            // $radio1.checked = true;
+
+
+
+            // // if ($dFragmCard2.contains($input2_continue)) {
+            // //     $input2_continue.remove();
+            // // }
+            // // if ($dFragmCard3.contains($input3_continue)) {
+            // //     $input3_continue.remove();
+            // // }
+
+            // // if ($dFragmCard4.contains($input4_continue)) {
+            // //     $input4_continue.remove();
+            // // }
+            // $input1_continue.classList.add('input1_continue');
+            // $dFragmCard1.appendChild($input1_continue);
+            // $input1_continue.appendChild($input1_btn);
+            // $input1_btn.classList.add('input1_btn');
+            // $input1_btn.setAttribute('content', 'Continue');
+            // $input1_btn.textContent = 'Continue';
+
+            // Creamos el div de abajo del container, y le añadimos el contenido:
+            $input2_continue.appendChild($span1_02);
+            $input2_continue.appendChild($)
+            $input2_continue.appendChild($input2_number);
+            $dFragmCard2.appendChild($input2_continue);
+            $input2_continue.appendChild($input2_btn);
+            $input2_continue.classList.add('input2_continue');
+            $input2_btn.classList.add('input2_btn');
+            $input2_btn.setAttribute('content', 'Continue');
+            $input2_btn.textContent = 'Continue';
+            $span1_02.textContent = 'Enter your pledge';
+            $span1_02.classList.add('span1_02');
+            $input2_number.classList.add('input2_number');
+            $input2_number.value = '25';
+            $.textContent = '$'
+            $.classList.add('dollar_card2');
+            if ($radio2.checked === true) {
+                console.log('test')
+                $input3_continue.remove();
+                $input4_continue.remove();
+                $input4_continue.remove();
+            }
+            $input2.addEventListener('change', function() {
+                if ($radio2.checked === true) {
+                    console.log('test')
+                    $input3_continue.remove();
+                    $input4_continue.remove();
+                    $input4_continue.remove();
+                }
+            });
         }
 
         if (chrome.test(browserModel) === true) {
@@ -341,6 +396,9 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+
+
+            // CÓDIGO PARA QUE AL PULSAR EL BOTÓN, SELECCIONE UN INPUT DE DENTRO DE LA TARJETA FLOTANTE:
         }
 
         if (chrome.test(browserModel) === false && mozilla.test(browserModel) === false) {
@@ -361,6 +419,29 @@ export function cards() {
     });
 
     // CUIDADO: DEPENDIENDO DEL NAVEGADOR, EL setInterval() SE PROCESA CON DISTINTA VELOCIDAD. DEPENDIENDO DEL BROWSER QUE SE ESTÉ EJECUTANDO, INTRODUCIREMOS EN DICHO setInterval() UNOS VALORES U OTROS 
+
+
+    // $input1.addEventListener('change', function() {
+
+    // });
+
+
+
+
+
+
+
+
+
+
+    // $input3.addEventListener('change', function() {
+
+    // });
+
+
+
+    // $input4.addEventListener('change', function() {
+
 }
 
 
