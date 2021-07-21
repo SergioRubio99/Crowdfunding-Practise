@@ -92,6 +92,12 @@ export function cards() {
         $no_floating_card_zone.classList.remove('floating_card_zone');
         $dFragm.style.top = 950 + 'px'
         $dFragm_position = 950;
+        let $no_floatTy = d.querySelector('.no_floating_thank_card');
+        let $floating_divTy = d.querySelector('.floating_div');
+        $floating_divTy.classList.add('floating_thank_card_zone')
+        $no_floatTy.classList.add('floating_thank_card')
+        $no_floatTy.classList.remove('no_floating_thank_card')
+
     })
 
 
@@ -125,6 +131,13 @@ export function cards() {
         $no_floating_card_zone.classList.remove('floating_card_zone');
         $dFragm.style.top = 950 + 'px'
         $dFragm_position = 950;
+
+        // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
+        let $no_floatTy = d.querySelector('.no_floating_thank_card');
+        let $floating_divTy = d.querySelector('.floating_div');
+        $floating_divTy.classList.add('floating_thank_card_zone')
+        $no_floatTy.classList.add('floating_thank_card')
+        $no_floatTy.classList.remove('no_floating_thank_card')
     })
 
 
@@ -160,6 +173,12 @@ export function cards() {
         $no_floating_card_zone.classList.remove('floating_card_zone');
         $dFragm.style.top = 950 + 'px'
         $dFragm_position = 950;
+        // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
+        let $no_floatTy = d.querySelector('.no_floating_thank_card');
+        let $floating_divTy = d.querySelector('.floating_div');
+        $floating_divTy.classList.add('floating_thank_card_zone')
+        $no_floatTy.classList.add('floating_thank_card')
+        $no_floatTy.classList.remove('no_floating_thank_card')
     })
 
     let $dFragmCard4 = d.querySelector(".dFragm-card4");
@@ -194,6 +213,12 @@ export function cards() {
         $no_floating_card_zone.classList.remove('floating_card_zone');
         $dFragm.style.top = 950 + 'px'
         $dFragm_position = 950;
+        // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
+        let $no_floatTy = d.querySelector('.no_floating_thank_card');
+        let $floating_divTy = d.querySelector('.floating_div');
+        $floating_divTy.classList.add('floating_thank_card_zone')
+        $no_floatTy.classList.add('floating_thank_card')
+        $no_floatTy.classList.remove('no_floating_thank_card')
     })
 
 
@@ -479,7 +504,6 @@ export function animation_btn() {
             $dFragm.style.top = 950 + 'px'
             console.log($no_floating_card_zone);
             $dFragm_position = 950;
-
         })
 
     });
@@ -545,6 +569,25 @@ export function animation_btn() {
 
 }
 
+// BOTÓN DE CARTA DE AGRADECIMIENTO
+
+let $thank_btn = d.querySelector('.thank_btn');
+$thank_btn.addEventListener('click', function() {
+
+    let $floatTy = d.querySelector('.floating_thank_card');
+    let $floating_divTy = d.querySelector('.floating_div');
+    $floating_divTy.classList.remove('floating_thank_card_zone')
+    $floatTy.classList.add('no_floating_thank_card')
+    $floatTy.classList.remove('floating_thank_card')
 
 
-// BOTÓN DE CERRAR TARJETA FLOTANTE:
+
+
+})
+
+// // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
+// let $no_floatTy = d.querySelector('.no_floating_thank_card');
+// let $floating_divTy = d.querySelector('.floating_div');
+// $floating_divTy.classList.add('floating_thank_card_zone')
+// $no_floatTy.classList.add('floating_thank_card')
+// $no_floatTy.classList.remove('no_floating_thank_card')
