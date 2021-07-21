@@ -26,8 +26,8 @@
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
-    position: fixed;
-    left: 472px;
+    position: relative;
+    left: px;
     top: 200px;
     display: flex;
 }
@@ -45,7 +45,7 @@
     font-weight: 100;
     margin-top: 48px;
     margin-bottom: 25px;
-    font-size: 23px;
+    font-size: 22px;
 }
 
 .thank_paragraph {
