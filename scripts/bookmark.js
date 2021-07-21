@@ -14,7 +14,9 @@ export let bookmark = function() {
     // img.toggleAttribute('img-bookmarked');
     // p.toggleAttribute('p-bookmarked');
 
+
     bookmark_btn.addEventListener('click', function() {
+
         bookmark_btn.toggleAttribute("bookmark-btn-bookmarked");
         bookmark_btn_inside.toggleAttribute('bookmark_btn_inside-bookmarked');
         img.toggleAttribute('img-bookmarked');
@@ -36,6 +38,14 @@ export let bookmark = function() {
 
     })
 
+    // Aquí cambiamos los estilos para cualquier navegador que no sea Firefox:
+    let browserModel = navigator.userAgent;
+    let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
+    console.log(browserModel)
+    if (mozilla.test(browserModel) === false) {
+        bookmark_btn_inside.classList.remove('bookmark_btn_inside')
+        bookmark_btn_inside.classList.add('bookmark_btn_inside-no-firefox')
+    }
 };
 
 

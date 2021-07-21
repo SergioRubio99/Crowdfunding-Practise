@@ -214,7 +214,26 @@ body {
     border-radius: 40px;
 }
 
+.bookmark_btn_inside-no-firefox {
+    background-color: rgb(54, 54, 54);
+    width: 54px;
+    height: 100%;
+    margin-top: -1px;
+    margin-left: -6px;
+    float: left;
+    border-radius: 40px;
+}
+
 .bookmark_btn_inside img {
+    position: relative;
+    display: flex;
+    max-width: 21px;
+    margin-left: 16.9px;
+    margin-right: 0px;
+    margin-top: 15px;
+}
+
+.bookmark_btn_inside-no-firefox img {
     position: relative;
     display: flex;
     max-width: 21px;

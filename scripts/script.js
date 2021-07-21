@@ -8,7 +8,7 @@ let d = document;
 
 //Hay que poner .js para que funcione la importación:
 
-progress_bar();
 bookmark();
+progress_bar();
 animation_btn();
 cards();
