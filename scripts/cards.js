@@ -1,7 +1,6 @@
 let d = document;
 
 const $dFragm = d.createElement('div');
-
 $dFragm.innerHTML = `
 <button class='close_btn'>'</button>
 <h2 class = 'dFragm-main_title'>Back this project</h1>
@@ -69,378 +68,365 @@ export function cards() {
 
     // });
     // ANIMACIÓN DE LA TARJETA FLOTANTE:
-    let $dFragmCard4 = d.querySelector(".dFragm-card4");
-    let $input4 = d.querySelector('.radio4__input');
-    let $input4_continue = d.createElement('div');
-    let $span1_04 = d.createElement('span');
-    let $input4_btn = d.createElement('button');
-    let $input4_number = d.createElement('input');
-    let $_03 = d.createElement('p');
 
-    let $dFragmCard3 = d.querySelector(".dFragm-card3");
-    let $input3 = d.querySelector('.radio3__input');
-    let $input3_continue = d.createElement('div');
-    let $span1_03 = d.createElement('span');
-    let $input3_btn = d.createElement('button');
-    let $input3_number = d.createElement('input');
-    let $_02 = d.createElement('p');
+    // CREANDO CADA CARTA FLOTANTE:
+
+
+    let $dFragmCard1 = d.querySelector(".dFragm-card1");
+    let $input1_continue = d.createElement('div');
+    let $input1_btn = d.createElement('button');
+    $input1_continue.setAttribute('style', 'display:flex;')
+    let $back_this_project_btn = d.querySelector('.back_this_project_btn');
+    $dFragmCard1.classList.add('dFragm-card1');
+    $input1_continue.classList.add('input1_continue');
+    $input1_btn.classList.add('input1_btn');
+    $dFragmCard1.appendChild($input1_continue);
+    $input1_continue.appendChild($input1_btn);
+    $input1_btn.textContent = 'Continue';
+    let $continue_btn_01 = d.querySelector('.input1_btn')
+
+    // Hacemos que el botón cierre toda la tarjeta:
+
+    $continue_btn_01.addEventListener('click', function() {
+        $no_floating_card_zone.classList.add('no_floating_card_zone')
+        $no_floating_card_zone.classList.remove('floating_card_zone');
+        $dFragm.style.top = 950 + 'px'
+        $dFragm_position = 950;
+    })
+
 
     let $dFragmCard2 = d.querySelector(".dFragm-card2");
-    let $input2 = d.querySelector('.radio2__input');
     let $input2_continue = d.createElement('div');
     let $span1_02 = d.createElement('span');
     let $input2_btn = d.createElement('button');
     let $input2_number = d.createElement('input');
     let $ = d.createElement('p');
-    let $dFragmCard1 = d.querySelector(".dFragm-card1");
+    $input2_continue.appendChild($span1_02);
+    $input2_continue.appendChild($);
+    $input2_continue.appendChild($input2_number);
+    $input2_continue.setAttribute('style', 'display:flex;')
+    $dFragmCard2.appendChild($input2_continue);
+    $input2_continue.appendChild($input2_btn);
+    $input2_continue.classList.add('input2_continue');
+    $input2_btn.classList.add('input2_btn');
+    $input2_btn.textContent = 'Continue';
+    $span1_02.textContent = 'Enter your pledge';
+    $span1_02.classList.add('span1_02');
+    $input2_number.classList.add('input2_number');
+    $input2_number.value = '25';
+    $.textContent = '$'
+    $.classList.add('dollar_card2');
 
-    let $input1 = d.querySelector('.radio1__input');
-    // let $dFragmCard1 = d.querySelector(".dFragm-card1");
-    let $input1_continue = d.createElement('div');
-    let $input1_btn = d.createElement('button');
+    // Hacemos que el botón cierre toda la tarjeta:
+
+    $input2_btn.addEventListener('click', function() {
+
+        $no_floating_card_zone.classList.add('no_floating_card_zone')
+        $no_floating_card_zone.classList.remove('floating_card_zone');
+        $dFragm.style.top = 950 + 'px'
+        $dFragm_position = 950;
+    })
+
+
+    let $dFragmCard3 = d.querySelector(".dFragm-card3");
+    let $input3_continue = d.createElement('div');
+    let $span1_03 = d.createElement('span');
+    let $input3_btn = d.createElement('button');
+    let $input3_number = d.createElement('input');
+    let $_02 = d.createElement('p');
+    $input3_continue.appendChild($span1_03);
+    $input3_continue.appendChild($_02)
+    $input3_continue.appendChild($input3_number);
+    $input3_continue.setAttribute('style', 'display:flex;')
+
+    $dFragmCard3.appendChild($input3_continue);
+    $input3_continue.appendChild($input3_btn);
+    $input3_continue.classList.add('input3_continue');
+    $input3_btn.classList.add('input3_btn');
+    $input3_btn.setAttribute('content', 'Continue');
+    $input3_btn.textContent = 'Continue';
+    $span1_03.textContent = 'Enter your pledge';
+    $span1_03.classList.add('span1_03');
+    $input3_number.classList.add('input3_number');
+    $input3_number.value = '75';
+    $_02.textContent = '$';
+    $_02.classList.add('dollar_card3');
+
+    // Hacemos que el botón cierre toda la tarjeta:
+
+    $input3_btn.addEventListener('click', function() {
+
+        $no_floating_card_zone.classList.add('no_floating_card_zone')
+        $no_floating_card_zone.classList.remove('floating_card_zone');
+        $dFragm.style.top = 950 + 'px'
+        $dFragm_position = 950;
+    })
+
+    let $dFragmCard4 = d.querySelector(".dFragm-card4");
+    let $input4 = d.querySelector('.radio4__input');
+    let $input4_continue = d.createElement('div');
+    $input4_continue.setAttribute('style', 'display:flex;')
+
+    let $span1_04 = d.createElement('span');
+    let $input4_btn = d.createElement('button');
+    let $input4_number = d.createElement('input');
+    let $_03 = d.createElement('p');
+    $dFragmCard4.appendChild($input4_continue);
+    $input4_continue.appendChild($span1_04);
+    $input4_continue.appendChild($_03)
+    $input4_continue.appendChild($input4_number);
+    $input4_continue.appendChild($input4_btn);
+    $input4_continue.classList.add('input4_continue');
+    $input4_btn.classList.add('input4_btn');
+    $input4_btn.setAttribute('content', 'Continue');
+    $input4_btn.textContent = 'Continue';
+    $span1_04.textContent = 'Enter your pledge';
+    $span1_04.classList.add('span1_04');
+    $input4_number.classList.add('input4_number');
+    $input4_number.value = '200';
+    $_03.textContent = '$';
+    $_03.classList.add('dollar_card4');
+    // Hacemos que el botón cierre toda la tarjeta:
+
+    $input4_btn.addEventListener('click', function() {
+
+        $no_floating_card_zone.classList.add('no_floating_card_zone')
+        $no_floating_card_zone.classList.remove('floating_card_zone');
+        $dFragm.style.top = 950 + 'px'
+        $dFragm_position = 950;
+    })
 
 
 
-    $card3_button.addEventListener('click', function() {
-        console.log($dFragm_position);
+
+
+    let $radio1 = d.getElementById('radio1');
+    $radio1.addEventListener('change', function() {
+        if ($radio1.checked === true) {
+            $input1_continue.style = 'display:flex;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input1_continue.style = 'display:none;';
+        }
+    });
+
+    $back_this_project_btn.addEventListener('click', function() {
+        $radio1.checked = true;
+        if ($radio1.checked === true) {
+            $input1_continue.style = 'display:flex;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input1_continue.style = 'display:none;';
+        }
+
+        //PARÁMETROS DE VELOCIDAD DE LA TARJETA SEGÚN EL NAVEGADOR:
         let browserModel = navigator.userAgent;
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
-        let chrome = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/91\.0\.4472\.164 Safari\/537\.36/;
+
         if (mozilla.test(browserModel) === true) {
-            console.log('Mozilla detected');
-            var $card3_interval = setInterval(() => {
+            var $card1_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 3);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
-                    clearInterval($card3_interval);
+                    clearInterval($card1_interval);
                 }
             }, 1);
-            let $radio4 = d.getElementById('radio4');
-            $radio4.checked = true;
-
-
-
-            // Creamos el div de abajo del container, y le añadimos el contenido:
-            $input4_continue.appendChild($span1_04);
-            $input4_continue.appendChild($_03)
-            $input4_continue.appendChild($input4_number);
-            $dFragmCard4.appendChild($input4_continue);
-            $input4_continue.appendChild($input4_btn);
-            $input4_continue.classList.add('input4_continue');
-            $input4_btn.classList.add('input4_btn');
-            $input4_btn.setAttribute('content', 'Continue');
-            $input4_btn.textContent = 'Continue';
-            $span1_04.textContent = 'Enter your pledge';
-            $span1_04.classList.add('span1_04');
-            $input4_number.classList.add('input4_number');
-            $input4_number.value = '200';
-            $_03.textContent = '$';
-            $_03.classList.add('dollar_card4');
-
-            if ($radio4.checked === true) {
-                console.log('test')
-                $input1_continue.remove();
-                $input2_continue.remove();
-                $input3_continue.remove();
-            }
-            $input4.addEventListener('change', function() {
-                if ($radio4.checked === true) {
-                    console.log('test')
-                    $input1_continue.remove();
-                    $input2_continue.remove();
-                    $input3_continue.remove();
-                }
-                console.log('input 4')
-            });
-
-
-
-
-
-        }
-
-        if (chrome.test(browserModel) === true) {
-            console.log('Chrome detected')
-            var $card3_interval = setInterval(() => {
+        } else {
+            var $card1_interval = setInterval(() => {
                 $dFragm_position -= 45;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
-                    clearInterval($card3_interval);
+                    clearInterval($card1_interval);
                 }
             }, 1);
+
         }
 
-        if (chrome.test(browserModel) === false && mozilla.test(browserModel) === false) {
-            console.log('The current browser is not Chrome or Mozilla')
-            var $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 10);
-
-            var $card3_if_interval = setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
-                    clearInterval($card3_interval);
-                }
-            }, 1);
-        }
-
-
+        // Para cerrar la ventana con cada botón:
 
     });
 
 
-    let $radio3 = d.getElementById('radio3');
-    $radio3.checked = true;
 
-    $card2_button.addEventListener('click', function() {
-        console.log($dFragm_position);
+    let $radio2 = d.getElementById('radio2');
+    $radio2.addEventListener('change', function() {
+        if ($radio2.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:flex;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input2_continue.style = 'display:none;';
+        }
+    });
+
+    $card1_button.addEventListener('click', function() {
+        $radio2.checked = true;
+        if ($radio2.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:flex;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input2_continue.style = 'display:none;';
+        }
+
+        //PARÁMETROS DE VELOCIDAD DE LA TARJETA SEGÚN EL NAVEGADOR:
         let browserModel = navigator.userAgent;
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
-        let chrome = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/91\.0\.4472\.164 Safari\/537\.36/;
         if (mozilla.test(browserModel) === true) {
-            console.log('Mozilla detected');
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 3);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                    clearInterval($card3_interval);
+                }
+            }, 1);
+        } else {
+            var $card3_interval = setInterval(() => {
+                $dFragm_position -= 45;
+                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+            }, 10);
+
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                    clearInterval($card3_interval);
+                }
+            }, 1);
+
+        }
+
+
+    });
+
+    let $radio3 = d.getElementById('radio3');
+    $radio3.checked = true;
+    $radio3.addEventListener('change', function() {
+        if ($radio3.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:flex;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input3_continue.style = 'display:none;';
+        }
+    })
+    $card2_button.addEventListener('click', function() {
+        $radio3.checked = true;
+        if ($radio3.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:flex;';
+            $input4_continue.style = 'display:none;';
+        } else {
+            $input3_continue.style = 'display:none;';
+        }
+        console.log($dFragm_position);
+        let browserModel = navigator.userAgent;
+        let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
+
+        if (mozilla.test(browserModel) === true) {
+            var $card3_interval = setInterval(() => {
+                $dFragm_position -= 44;
+                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+            }, 3);
+
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
                     clearInterval($card3_interval);
                 }
             }, 4);
 
-
-            let $radio3 = d.getElementById('radio3');
-            $radio3.checked = true;
-
-            // if ($dFragmCard2.contains($input2_continue)) {
-            //     $input2_continue.remove();
-            // }
-            // if ($dFragmCard1.contains($input1_continue)) {
-            //     $input1_continue.remove();
-            // }
-
-            // if ($dFragmCard4.contains($input4_continue)) {
-            //     $input4_continue.remove();
-            // }
-            // Creamos el div de abajo del container, y le añadimos el contenido:
-            $input3_continue.appendChild($span1_03);
-            $input3_continue.appendChild($_02)
-            $input3_continue.appendChild($input3_number);
-            $dFragmCard3.appendChild($input3_continue);
-            $input3_continue.appendChild($input3_btn);
-            $input3_continue.classList.add('input3_continue');
-            $input3_btn.classList.add('input3_btn');
-            $input3_btn.setAttribute('content', 'Continue');
-            $input3_btn.textContent = 'Continue';
-            $span1_03.textContent = 'Enter your pledge';
-            $span1_03.classList.add('span1_03');
-            $input3_number.classList.add('input3_number');
-            $input3_number.value = '75';
-            $_02.textContent = '$';
-            $_02.classList.add('dollar_card3');
-            if ($radio3.checked === true) {
-                console.log('test')
-                $input2_continue.remove();
-                $input4_continue.remove();
-                $input1_continue.remove();
-            }
-            $input3.addEventListener('change', function() {
-                if ($radio3.checked === true) {
-                    console.log('test')
-                    $input2_continue.remove();
-                    $input4_continue.remove();
-                    $input1_continue.remove();
-                }
-            });
-
-            $input3.addEventListener('change', function() {
-                if ($dFragmCard2.contains($input2_continue)) {
-                    $input2_continue.remove();
-                }
-                if ($dFragmCard1.contains($input1_continue)) {
-                    $input1_continue.remove();
-                }
-
-                if ($dFragmCard4.contains($input4_continue)) {
-                    $input4_continue.remove();
-                }
-            });
-
-        }
-
-        if (chrome.test(browserModel) === true) {
-            console.log('Chrome detected')
+        } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 45;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
                     clearInterval($card3_interval);
                 }
             }, 1);
         }
-
-        if (chrome.test(browserModel) === false && mozilla.test(browserModel) === false) {
-            console.log('The current browser is not Chrome or Mozilla')
-            var $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 10);
-
-            var $card3_if_interval = setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
-                    clearInterval($card3_interval);
-                }
-            }, 1);
-        }
-
 
     });
 
-    $card1_button.addEventListener('click', function() {
+
+
+    let $radio4 = d.getElementById('radio4');
+    $radio4.addEventListener('change', function() {
+        if ($radio4.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:flex;';
+        } else {
+            $input4_continue.style = 'display:none;';
+        }
+    })
+    $card3_button.addEventListener('click', function() {
+        $radio4.checked = true;
+        if ($radio4.checked === true) {
+            $input1_continue.style = 'display:none;';
+            $input2_continue.style = 'display:none;';
+            $input3_continue.style = 'display:none;';
+            $input4_continue.style = 'display:flex;';
+
+        } else {
+            $input4_continue.style = 'display:none;';
+
+        }
         console.log($dFragm_position);
         let browserModel = navigator.userAgent;
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
-        let chrome = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/91\.0\.4472\.164 Safari\/537\.36/;
+
         if (mozilla.test(browserModel) === true) {
             console.log('Mozilla detected');
-            var $card3_interval = setInterval(() => {
+            let $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 3);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
                     clearInterval($card3_interval);
                 }
             }, 1);
 
-            let $radio2 = d.getElementById('radio2');
-            $radio2.checked = true;
-
-            // CÓDIGO PARA QUE AL PULSAR EL BOTÓN, SELECCIONE UN INPUT DE DENTRO DE LA TARJETA FLOTANTE:
-
-            // let $radio1 = d.getElementById('radio1');
-            // $radio1.checked = true;
-
-
-
-            // // if ($dFragmCard2.contains($input2_continue)) {
-            // //     $input2_continue.remove();
-            // // }
-            // // if ($dFragmCard3.contains($input3_continue)) {
-            // //     $input3_continue.remove();
-            // // }
-
-            // // if ($dFragmCard4.contains($input4_continue)) {
-            // //     $input4_continue.remove();
-            // // }
-            // $input1_continue.classList.add('input1_continue');
-            // $dFragmCard1.appendChild($input1_continue);
-            // $input1_continue.appendChild($input1_btn);
-            // $input1_btn.classList.add('input1_btn');
-            // $input1_btn.setAttribute('content', 'Continue');
-            // $input1_btn.textContent = 'Continue';
-
-            // Creamos el div de abajo del container, y le añadimos el contenido:
-            $input2_continue.appendChild($span1_02);
-            $input2_continue.appendChild($)
-            $input2_continue.appendChild($input2_number);
-            $dFragmCard2.appendChild($input2_continue);
-            $input2_continue.appendChild($input2_btn);
-            $input2_continue.classList.add('input2_continue');
-            $input2_btn.classList.add('input2_btn');
-            $input2_btn.setAttribute('content', 'Continue');
-            $input2_btn.textContent = 'Continue';
-            $span1_02.textContent = 'Enter your pledge';
-            $span1_02.classList.add('span1_02');
-            $input2_number.classList.add('input2_number');
-            $input2_number.value = '25';
-            $.textContent = '$'
-            $.classList.add('dollar_card2');
-            if ($radio2.checked === true) {
-                console.log('test')
-                $input3_continue.remove();
-                $input4_continue.remove();
-                $input4_continue.remove();
-            }
-            $input2.addEventListener('change', function() {
-                if ($radio2.checked === true) {
-                    console.log('test')
-                    $input3_continue.remove();
-                    $input4_continue.remove();
-                    $input4_continue.remove();
-                }
-            });
-        }
-
-        if (chrome.test(browserModel) === true) {
-            console.log('Chrome detected')
-            var $card3_interval = setInterval(() => {
+        } else {
+            let $card3_interval = setInterval(() => {
                 $dFragm_position -= 45;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
-            var $card3_if_interval = setInterval(() => {
+            setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
                     clearInterval($card3_interval);
                 }
             }, 1);
 
-
-            // CÓDIGO PARA QUE AL PULSAR EL BOTÓN, SELECCIONE UN INPUT DE DENTRO DE LA TARJETA FLOTANTE:
         }
-
-        if (chrome.test(browserModel) === false && mozilla.test(browserModel) === false) {
-            console.log('The current browser is not Chrome or Mozilla')
-            var $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 10);
-
-            var $card3_if_interval = setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
-                    clearInterval($card3_interval);
-                }
-            }, 1);
-        }
-
 
     });
 
+
+
+
     // CUIDADO: DEPENDIENDO DEL NAVEGADOR, EL setInterval() SE PROCESA CON DISTINTA VELOCIDAD. DEPENDIENDO DEL BROWSER QUE SE ESTÉ EJECUTANDO, INTRODUCIREMOS EN DICHO setInterval() UNOS VALORES U OTROS 
-
-
-    // $input1.addEventListener('change', function() {
-
-    // });
-
-
-
-
-
-
-
-
-
-
-    // $input3.addEventListener('change', function() {
-
-    // });
-
-
-
-    // $input4.addEventListener('change', function() {
 
 }
 
@@ -463,16 +449,18 @@ export function cards() {
 
 
 
-// ANIMACIÓN DE LAS TARJETAS
+// ANIMACIÓN DE LA TARJETA FLOTANTE:
 
 
 let $no_floating_card_zone = d.querySelector('.no_floating_card_zone');
 let $card1_button = d.querySelector('.card1-button');
 let $card2_button = d.querySelector('.card2-button');
 let $card3_button = d.querySelector('.card3-button');
+let $back_this_project_btn = d.querySelector('.back_this_project_btn');
 
 export function animation_btn() {
-    $card1_button.addEventListener('click', function() {
+
+    $back_this_project_btn.addEventListener('click', function() {
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
 
@@ -495,6 +483,28 @@ export function animation_btn() {
         })
 
     });
+
+    $card1_button.addEventListener('click', function() {
+        $no_floating_card_zone.classList.remove('no_floating_card_zone');
+        $no_floating_card_zone.classList.add('floating_card_zone');
+
+        let $close_btn = d.querySelector('.close_btn');
+        // let $floating_card_zone = d.querySelector('.floating_card_zone');
+        // console.log($floating_card_zone);
+
+        // AÑADIMOS EL JAVASCRIPT DEL BOTÓN DE CERRAR EN CADA EVENTO
+
+        $close_btn.addEventListener('click', function() {
+            $no_floating_card_zone.classList.add('no_floating_card_zone')
+            $no_floating_card_zone.classList.remove('floating_card_zone');
+
+            // $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+            $dFragm.style.top = 950 + 'px'
+            $dFragm_position = 950;
+
+        })
+
+    });
     $card2_button.addEventListener('click', function() {
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
@@ -506,13 +516,14 @@ export function animation_btn() {
             $no_floating_card_zone.classList.add('no_floating_card_zone')
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
-            console.log('Close button executing');
-            console.log($no_floating_card_zone);
+            $dFragm.style.top = 950 + 'px'
+            $dFragm_position = 950;
         })
 
 
 
     });
+
     $card3_button.addEventListener('click', function() {
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
@@ -524,12 +535,16 @@ export function animation_btn() {
             $no_floating_card_zone.classList.add('no_floating_card_zone')
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
-            console.log('Close button executing');
-            console.log($no_floating_card_zone);
+            $dFragm.style.top = 950 + 'px'
+            $dFragm_position = 950;
         })
 
     });
 
+
+
 }
+
+
 
 // BOTÓN DE CERRAR TARJETA FLOTANTE:

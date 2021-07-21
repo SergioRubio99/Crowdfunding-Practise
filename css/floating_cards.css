@@ -91,8 +91,8 @@ background-color: rgba(0, 0, 0, 0.6); */
     margin-top: 30px;
 }
 
-.radio1__input {
-    display: none;
+.radio1:hover {
+    color: hsl(176, 45%, 47%);
 }
 
 .radio1__radio {
@@ -103,14 +103,15 @@ background-color: rgba(0, 0, 0, 0.6); */
     margin-right: 10px;
     box-sizing: border-box;
     padding: 2px;
+    margin-left: 0px;
 }
 
 .radio1:hover .radio1__radio {
     border-color: hsl(176, 45%, 47%);
 }
 
-.radio1:hover {
-    color: hsl(176, 45%, 47%);
+.radio1__input {
+    display: none;
 }
 
 .radio1__radio::after {
@@ -125,7 +126,7 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .radio1__input:checked+.radio1__radio::after {
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 .dFragm-card1>p {
@@ -232,7 +233,7 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .radio2__input:checked+.radio2__radio::after {
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 .Bamboo_stand {
@@ -385,7 +386,7 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .radio3__input:checked+.radio3__radio::after {
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 .Bamboo_stand {
@@ -548,7 +549,7 @@ background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .radio4__input:checked+.radio4__radio::after {
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 .Bamboo_stand {
