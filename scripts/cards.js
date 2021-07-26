@@ -1,3 +1,5 @@
+import { responsive_card } from './responsive.js'
+
 let d = document;
 
 const $dFragm = d.createElement('div');
@@ -415,6 +417,7 @@ export function cards() {
     });
 
     $back_this_project_btn.addEventListener('click', function() {
+
         $radio1.checked = true;
         if ($radio1.checked === true) {
             $input1_continue.style = 'display:flex;';
@@ -433,12 +436,21 @@ export function cards() {
             var $card1_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+
             }, 3);
 
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card1_interval);
                 }
+
+            }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '46px';
+                }
+
             }, 1);
         } else {
             var $card1_interval = setInterval(() => {
@@ -449,6 +461,12 @@ export function cards() {
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card1_interval);
+                }
+            }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '46px';
                 }
             }, 1);
 
@@ -495,6 +513,16 @@ export function cards() {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card3_interval);
                 }
+
+            }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
+
             }, 1);
         } else {
             var $card3_interval = setInterval(() => {
@@ -508,6 +536,15 @@ export function cards() {
                 }
             }, 1);
 
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
+
+            }, 1);
         }
 
 
@@ -534,7 +571,6 @@ export function cards() {
         } else {
             $input3_continue.style = 'display:none;';
         }
-        console.log($dFragm_position);
         let browserModel = navigator.userAgent;
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
 
@@ -549,7 +585,15 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 4);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
 
+            }, 1);
         } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -560,6 +604,15 @@ export function cards() {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
+            }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
+
             }, 1);
         }
 
@@ -604,6 +657,15 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
+
+            }, 1);
 
         } else {
             let $card3_interval = setInterval(() => {
@@ -615,6 +677,15 @@ export function cards() {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
+            }, 1);
+            setInterval(() => {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    $dFragm.style.height = '84.5%';
+                    $dFragm.style.top = '70px';
+                    console.log(window.scrollY)
+                    window.scrollTo(0, 0)
+                }
+
             }, 1);
 
         }
@@ -659,9 +730,11 @@ let $back_this_project_btn = d.querySelector('.back_this_project_btn');
 export function animation_btn() {
 
     $back_this_project_btn.addEventListener('click', function() {
+        // Para hacer aparecer la carta:
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
 
+        responsive_card();
         let $close_btn = d.querySelector('.close_btn');
         // let $floating_card_zone = d.querySelector('.floating_card_zone');
         // console.log($floating_card_zone);
@@ -679,9 +752,11 @@ export function animation_btn() {
             $dFragm_position = 950;
         })
 
+
     });
 
     $card1_button.addEventListener('click', function() {
+        // Para hacer aparecer la carta:
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
 
@@ -696,13 +771,14 @@ export function animation_btn() {
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
             // $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            $dFragm.style.top = 950 + 'px'
+            $dFragm.style.top = 950 + 'px';
             $dFragm_position = 950;
 
         })
 
     });
     $card2_button.addEventListener('click', function() {
+        // Para hacer aparecer la carta:
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
         let $close_btn = d.querySelector('.close_btn');
@@ -722,6 +798,7 @@ export function animation_btn() {
     });
 
     $card3_button.addEventListener('click', function() {
+        // Para hacer aparecer la carta:
         $no_floating_card_zone.classList.remove('no_floating_card_zone');
         $no_floating_card_zone.classList.add('floating_card_zone');
         let $close_btn = d.querySelector('.close_btn');
