@@ -445,13 +445,17 @@ export function cards() {
                 }
 
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '46px';
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
         } else {
             var $card1_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -463,12 +467,17 @@ export function cards() {
                     clearInterval($card1_interval);
                 }
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '46px';
-                }
-            }, 1);
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
 
         }
 
@@ -515,15 +524,17 @@ export function cards() {
                 }
 
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
         } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -536,15 +547,17 @@ export function cards() {
                 }
             }, 1);
 
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
         }
 
 
@@ -585,15 +598,17 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 4);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
         } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -657,15 +672,17 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
 
         } else {
             let $card3_interval = setInterval(() => {
@@ -678,15 +695,17 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
 
-            }, 1);
+                }, 1);
+            }
 
         }
 
