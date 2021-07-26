@@ -24,7 +24,7 @@ Pledge with no reward
 <label class='radio2' for="radio2">
 <input class='radio2__input' type="radio" id='radio2' name="fav_language" value="HTML">
 <div class='radio2__radio'></div>
-Bamboo Stand <span class='card2_span'> Pledge 25$ or more</span> <span class='card2_number'>101</span> <p class = 'card2_left'>left</p> 
+Bamboo Stand <span class='card2_span'> Pledge 25$ or more</span> <span class='card2_number'>3</span> <p class = 'card2_left'>left</p> 
 </label><br>
 <p>You get an ergonomic stand made of natural bamboo.You've helped us launch our promotional campaign, and you'll be added to a special Backer member list</p>
 </div>
@@ -35,7 +35,7 @@ Bamboo Stand <span class='card2_span'> Pledge 25$ or more</span> <span class='ca
 <label class='radio3' for="radio3">
 <input class='radio3__input' type="radio" id='radio3' name="fav_language" value="HTML">
 <div class='radio3__radio'></div>
-Black Edition Stand<span class='card3_span'> Pledge 75$ or more</span> <span class='card3_number'>64</span> <p class = 'card3_left'>left</p> 
+Black Edition Stand<span class='card3_span'> Pledge 75$ or more</span> <span class='card3_number'>2</span> <p class = 'card3_left'>left</p> 
 </label><br>
 <p>You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
 </div>
@@ -111,6 +111,7 @@ export function cards() {
     let $card2_number = d.querySelector('.card2_number');
     let $ = d.createElement('p');
     let $radio2 = d.getElementById('radio2');
+    let $radio2_container = d.querySelector('.radio2');
 
     $input2_continue.appendChild($span1_02);
     $input2_continue.appendChild($);
@@ -121,6 +122,7 @@ export function cards() {
     $input2_continue.classList.add('input2_continue');
     $input2_btn.classList.add('input2_btn');
     $input2_btn.textContent = 'Continue';
+
     $span1_02.textContent = 'Enter your pledge';
     $span1_02.classList.add('span1_02');
     $input2_number.classList.add('input2_number');
@@ -140,12 +142,62 @@ export function cards() {
         // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
         let $no_floatTy = d.querySelector('.no_floating_thank_card');
         let $floating_divTy = d.querySelector('.floating_div');
+        let $card1_n = d.querySelector('.card1>div:nth-child(3)>h3');
+        // CÓDIGO PARA APLICAR EL DINERO DE LA DONACIÓN ESPECÍFICA SELECCIONADA AL MONTO TOTAL DE DINERO DONADO, VIÉNDOSE ESTO REFLEJADO EN LA BARRA DE PROGRESO Y EN DICHO TOTAL DINÁMICAMENTE:
+        let $card2_$ = parseFloat($input2_number.value);
+        let container$ = parseFloat(d.querySelector('.amount').textContent.replace(',', '').substring(1));
+        let total$ = d.querySelector('.amount');
         $floating_divTy.classList.add('floating_thank_card_zone');
         $no_floatTy.classList.add('floating_thank_card');
         $no_floatTy.classList.remove('no_floating_thank_card');
         $card2_number.textContent = parseFloat($card2_number.textContent) - 1;
-        let $card1_n = d.querySelector('.card1>div:nth-child(3)>h3');
         $card1_n.innerText = $card2_number.textContent;
+        container$ += $card2_$;
+        container$ = '$' + container$.toString();
+        container$ = container$.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        total$.innerText = container$;
+
+        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
+        let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
+        backers += 1;
+        backers = backers.toString();
+        backers = backers.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        d.querySelector('.second_section_container:nth-child(2)>h2').innerText = backers;
+        if (parseFloat($card1_n.innerText) === 0) {
+
+            let $card1 = d.querySelector('.card1');
+            let $card1_title = d.querySelector('.card1>div>h3');
+            let $card1_span = d.querySelector('.card1>div>span');
+            let $card1_h3 = d.querySelector('.card1>div:nth-child(3)>h3');
+            let $card1_p = d.querySelector('.card1>div:nth-child(2)>p');
+            let $card1_left = d.querySelector('.card1>div:nth-child(3)>span');
+            let $card2_span = d.querySelector('.card2_span');
+            let $card2_button = d.querySelector('.card2-button')
+
+            $dFragmCard2.setAttribute('style', 'color:rgb(242, 242, 242, 0.6); background-color: rgb(242, 242, 242, 0.6);');
+            $radio2_container.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            $card2_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            // Manejo del CSSOM, por si quisiéramos modificar el pseudoelemento CSS al seleccionar el input:
+            // document.styleSheets[1].cssRules[63].style.backgroundColor = 'rgb(180, 180, 180,0.4)';
+            // document.styleSheets[1].cssRules[61].style = '';
+            //---------------------------
+            $card2_number.setAttribute('style', 'color: lightgray');
+            $input2_number.setAttribute('style', 'color: lightgray');
+            $input2_btn.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $radio2.setAttribute('disabled', 'true');
+            $card1_button.setAttribute('disabled', 'true');
+            $card1_button.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $card1.setAttribute('style', 'background-color: rgb(242, 242, 242, 0.6);')
+            $card1_title.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card1_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4);')
+            $card1_h3.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card1_n.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card1_left.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card2_span.setAttribute('style', 'color:rgb(180, 180, 180,0.4);');
+            $card1_p.setAttribute('style', 'color:rgb(180, 180, 180,0.4);');
+
+
+        }
     })
 
 
@@ -155,8 +207,11 @@ export function cards() {
     let $input3_btn = d.createElement('button');
     let $input3_number = d.createElement('input');
     let $card3_number = d.querySelector('.card3_number');
+    let $card3_span = d.querySelector('.card4_span');
     let $radio3 = d.getElementById('radio3');
+    let $radio3_container = d.querySelector('.radio3');
     let $_02 = d.createElement('p');
+
     $input3_continue.appendChild($span1_03);
     $input3_continue.appendChild($_02)
     $input3_continue.appendChild($input3_number);
@@ -181,7 +236,7 @@ export function cards() {
 
         $no_floating_card_zone.classList.add('no_floating_card_zone');
         $no_floating_card_zone.classList.remove('floating_card_zone');
-        $dFragm.style.top = 950 + 'px'
+        $dFragm.style.top = 950 + 'px';
         $dFragm_position = 950;
         // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
         let $no_floatTy = d.querySelector('.no_floating_thank_card');
@@ -190,14 +245,64 @@ export function cards() {
         $no_floatTy.classList.add('floating_thank_card');
         $no_floatTy.classList.remove('no_floating_thank_card');
         $card3_number.textContent = parseFloat($card3_number.textContent) - 1;
-
+        // CÓDIGO PARA APLICAR EL DINERO DE LA DONACIÓN ESPECÍFICA SELECCIONADA AL MONTO TOTAL DE DINERO DONADO, VIÉNDOSE ESTO REFLEJADO EN LA BARRA DE PROGRESO Y EN DICHO TOTAL DINÁMICAMENTE:
         let $card2_n = d.querySelector('.card2>div:nth-child(3)>h3');
         $card2_n.innerText = $card3_number.textContent;
+        let $card3_$ = parseFloat($input3_number.value);
+        let container$ = parseFloat(d.querySelector('.amount').textContent.replace(',', '').substring(1));
+        let total$ = d.querySelector('.amount');
+        $floating_divTy.classList.add('floating_thank_card_zone');
+        $no_floatTy.classList.add('floating_thank_card');
+        $no_floatTy.classList.remove('no_floating_thank_card');
+        $card2_n.innerText = $card3_number.textContent;
+        container$ += $card3_$;
+        container$ = '$' + container$.toString();
+        container$ = container$.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        total$.innerText = container$;
+        // CÓDIGO PARA DESACTIVAR LA TARJETA:
+
+        if (parseFloat($card2_n.textContent) === 0) {
+            let $card2 = d.querySelector('.card2');
+            let $card2_title = d.querySelector('.card2>div>h3');
+            let $card2_span = d.querySelector('.card2>div>span');
+            let $card2_p = d.querySelector('.card2>div:nth-child(2)>p');
+            let $card2_left = d.querySelector('.card2>div:nth-child(3)>span');
+            let $card3_span = d.querySelector('.card3_span')
+
+            $dFragmCard3.setAttribute('style', 'color:rgb(242, 242, 242, 0.6); background-color: rgb(242, 242, 242, 0.6);');
+            $radio3_container.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            $card3_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            // Manejo del CSSOM, por si quisiéramos modificar el pseudoelemento CSS al seleccionar el input:
+            // document.styleSheets[1].cssRules[63].style.backgroundColor = 'rgb(180, 180, 180,0.4)';
+            // document.styleSheets[1].cssRules[61].style = '';
+            //---------------------------
+            $card3_number.setAttribute('style', 'color: lightgray');
+            $input3_number.setAttribute('style', 'color: lightgray');
+            $input3_btn.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $radio3.setAttribute('disabled', 'true');
+            $card2_button.setAttribute('disabled', 'true');
+            $card2_button.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $card2.setAttribute('style', 'background-color: rgb(242, 242, 242, 0.6);')
+            $card2_title.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card2_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4);')
+            $card2_p.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card2_n.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card2_n.innerText = $card3_number.textContent;
+            $card2_left.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card3_span.setAttribute('style', 'color:rgb(180, 180, 180,0.4);');
+        }
+        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
+
+        let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
+        backers += 1;
+        backers = backers.toString();
+        backers = backers.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        d.querySelector('.second_section_container:nth-child(2)>h2').innerText = backers;
+
 
     })
 
     let $dFragmCard4 = d.querySelector(".dFragm-card4");
-    let $input4 = d.querySelector('.radio4__input');
     let $input4_continue = d.createElement('div');
     $input4_continue.setAttribute('style', 'display:flex;');
     let $radio4 = d.getElementById('radio4');
@@ -239,20 +344,24 @@ export function cards() {
         $no_floatTy.classList.add('floating_thank_card')
         $no_floatTy.classList.remove('no_floating_thank_card')
         $card4_number.textContent = parseFloat($card4_number.textContent) - 1;
+
+        // CÓDIGO PARA DESACTIVAR LA TARJETA:
+
         if (parseFloat($card4_number.textContent) === 0) {
             let $card3 = d.querySelector('.card3');
             let $card3_title = d.querySelector('.card3>div>h3');
             let $card3_span = d.querySelector('.card3>div>span');
             let $card3_p = d.querySelector('.card3>div:nth-child(2)>p');
             let $card3_n = d.querySelector('.card3>div:nth-child(3)>h3');
-            let $card3_left = d.querySelector('.card3>div:nth-child(3)>p');
+            let $card3_left = d.querySelector('.card3>div:nth-child(3)>span');
 
             $dFragmCard4.setAttribute('style', 'color:rgb(242, 242, 242, 0.6); background-color: rgb(242, 242, 242, 0.6);');
             $radio4_container.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
             $card4_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
-            // Manejo del CSSOM:
-            document.styleSheets[1].cssRules[63].style.backgroundColor = 'rgb(180, 180, 180,0.4)';
-            document.styleSheets[1].cssRules[61].style = '';
+            // Manejo del CSSOM, por si quisiéramos modificar el pseudoelemento CSS al seleccionar el input:
+            // document.styleSheets[1].cssRules[63].style.backgroundColor = 'rgb(180, 180, 180,0.4)';
+            // document.styleSheets[1].cssRules[61].style = '';
+            //---------------------------
             $card4_number.setAttribute('style', 'color: lightgray');
             $input4_number.setAttribute('style', 'color: lightgray');
             $input4_btn.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
@@ -267,7 +376,27 @@ export function cards() {
             $card3_n.innerText = $card4_number.textContent;
             $card3_left.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
         }
+        // CÓDIGO PARA APLICAR EL DINERO DE LA DONACIÓN ESPECÍFICA SELECCIONADA AL MONTO TOTAL DE DINERO DONADO, VIÉNDOSE ESTO REFLEJADO EN LA BARRA DE PROGRESO Y EN DICHO TOTAL DINÁMICAMENTE:
+        let $card4_$ = parseFloat($input4_number.value);
+        let container$ = parseFloat(d.querySelector('.amount').textContent.replace(',', '').substring(1));
+        let total$ = d.querySelector('.amount');
+        $floating_divTy.classList.add('floating_thank_card_zone');
+        $no_floatTy.classList.add('floating_thank_card');
+        $no_floatTy.classList.remove('no_floating_thank_card');
+        // $card4_number.textContent = parseFloat($card4_number.textContent) - 1;
+        // $card3_n.innerText = $card4_number.textContent;
+        container$ += $card4_$;
+        container$ = '$' + container$.toString();
+        container$ = container$.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        total$.innerText = container$;
 
+        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
+
+        let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
+        backers += 1;
+        backers = backers.toString();
+        backers = backers.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        d.querySelector('.second_section_container:nth-child(2)>h2').innerText = backers;
     });
 
 
@@ -307,18 +436,18 @@ export function cards() {
             }, 3);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card1_interval);
                 }
             }, 1);
         } else {
             var $card1_interval = setInterval(() => {
-                $dFragm_position -= 45;
+                $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card1_interval);
                 }
             }, 1);
@@ -363,18 +492,18 @@ export function cards() {
             }, 3);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card3_interval);
                 }
             }, 1);
         } else {
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
+                $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
             }, 1);
@@ -416,19 +545,19 @@ export function cards() {
             }, 3);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card3_interval);
                 }
             }, 4);
 
         } else {
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
+                $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
             }, 1);
@@ -471,19 +600,19 @@ export function cards() {
             }, 3);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                     clearInterval($card3_interval);
                 }
             }, 1);
 
         } else {
             let $card3_interval = setInterval(() => {
-                $dFragm_position -= 45;
+                $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             }, 10);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 120) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
             }, 1);
@@ -623,3 +752,35 @@ $thank_btn.addEventListener('click', function() {
     $floatTy.classList.remove('floating_thank_card');
 
 });
+
+
+// CÓDIGO PARA EVITAR QUE LOS MÁRGENES DE LOS BOTONES DE DESALINEEN AL CAMBIAR EL NÚMERO DE STANDS RESTANTES:
+
+let $adjust_card1 = d.querySelector('.card1>div:nth-child(3)>h3');
+setInterval(() => {
+    if ($adjust_card1.textContent.length === 2) {
+        let $card1_btn = d.querySelector('.card1-button');
+        $card1_btn.style = 'margin-left:328px;'
+    }
+
+    if ($adjust_card1.textContent.length === 1) {
+        let $card1_btn = d.querySelector('.card1-button');
+        $card1_btn.style = 'margin-left:356px;'
+    }
+
+    if ($adjust_card1.textContent === '0') {
+        let $card1_btn = d.querySelector('.card1-button');
+        $card1_btn.setAttribute('style', 'margin-left:350px; background-color:rgba(180, 180, 180, 0.4);')
+    }
+
+}, 1);
+
+let $adjust_card2 = d.querySelector('.card2>div:nth-child(3)>h3');
+setInterval(() => {
+    // Como el botón ya tenía estilos de color, para no perderlos los introducimos de nuevo al sobreescribir el atributo style:
+    if ($adjust_card2.textContent === '0') {
+        let $card2_btn = d.querySelector('.card2-button');
+        $card2_btn.setAttribute('style', 'margin-left:350px; background-color:rgba(180, 180, 180, 0.4);')
+    }
+
+}, 1);

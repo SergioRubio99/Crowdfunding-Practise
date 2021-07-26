@@ -308,7 +308,7 @@ div[bookmark_btn_inside-bookmarked] {
     margin-left: 10px;
 }
 
-.second_section_container:nth-child(1)>p {
+.second_section_container:nth-child(1)>span {
     margin-left: 11px;
     font-family: 'Commissioner';
     color: rgb(146, 146, 146)
@@ -323,7 +323,7 @@ div[bookmark_btn_inside-bookmarked] {
     margin-left: 40px;
 }
 
-.second_section_container:nth-child(2)>p {
+.second_section_container:nth-child(2)>span {
     /* margin-left: 11px; */
     font-family: 'Commissioner';
     color: rgb(146, 146, 146);
@@ -339,7 +339,7 @@ div[bookmark_btn_inside-bookmarked] {
     margin-left: 40px;
 }
 
-.second_section_container:nth-child(3)>p {
+.second_section_container:nth-child(3)>span {
     font-family: 'Commissioner';
     color: rgb(146, 146, 146);
     margin-left: 120px;
@@ -473,27 +473,25 @@ div[bookmark_btn_inside-bookmarked] {
 .card1 div:nth-child(3) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 70px;
+    width: 100%;
 }
 
 .card1 div:nth-child(3) h3 {
     font-family: 'CommissionerBold';
-    position: absolute;
-    top: 466px;
     font-size: 2em;
-    left: 57px;
+    margin: 0px;
+    margin-left: 25px;
+    margin-right: 12px;
 }
 
-.card1 div:nth-child(3) p {
-    position: absolute;
-    top: 473px;
-    left: 139px;
-    color: rgb(131, 131, 131);
-    width: 0% !important;
+.card1 div:nth-child(3) span {
+    color: rgb(116, 116, 116);
+    margin: 0px;
 }
 
-.card1 div:nth-child(3) button {
+.card1-button {
+    margin: 0px;
     background-color: hsl(176, 50%, 47%);
     color: white;
     font-family: 'Commissioner';
@@ -503,7 +501,7 @@ div[bookmark_btn_inside-bookmarked] {
     width: 150px;
     height: 40px;
     border: none;
-    margin-left: 435px;
+    margin-left: 315px;
 }
 
 .card1 div:nth-child(3) button:hover {
@@ -561,27 +559,25 @@ div[bookmark_btn_inside-bookmarked] {
 .card2 div:nth-child(3) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 70px;
+    width: 100%;
 }
 
 .card2 div:nth-child(3) h3 {
     font-family: 'CommissionerBold';
-    position: absolute;
-    top: 720px;
     font-size: 2em;
-    left: 65px;
+    margin: 0px;
+    margin-left: 25px;
+    margin-right: 12px;
 }
 
-.card2 div:nth-child(3) p {
-    position: absolute;
-    top: 726px;
-    left: 134px;
-    color: rgb(131, 131, 131);
-    width: 0% !important;
+.card2 div:nth-child(3) span {
+    color: rgb(116, 116, 116);
+    margin: 0px;
 }
 
-.card2 div:nth-child(3) button {
+.card2-button {
+    margin: 0px;
     background-color: hsl(176, 50%, 47%);
     color: white;
     font-family: 'Commissioner';
@@ -591,7 +587,7 @@ div[bookmark_btn_inside-bookmarked] {
     width: 150px;
     height: 40px;
     border: none;
-    margin-left: 435px;
+    margin-left: 356px;
 }
 
 .card2 div:nth-child(3) button:hover {
@@ -646,28 +642,25 @@ div[bookmark_btn_inside-bookmarked] {
 .card3 div:nth-child(3) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 70px;
+    width: 100%;
 }
 
 .card3 div:nth-child(3) h3 {
     font-family: 'CommissionerBold';
-    position: absolute;
-    top: 974px;
-    font-size: 1.5em;
     font-size: 2em;
-    left: 65px;
+    margin: 0px;
+    margin-left: 25px;
+    margin-right: 12px;
 }
 
-.card3 div:nth-child(3) p {
-    position: absolute;
-    top: 981px;
-    left: 113px;
-    color: rgb(131, 131, 131);
-    width: 0% !important;
+.card3 div:nth-child(3) span {
+    color: rgb(116, 116, 116);
+    margin: 0px;
 }
 
-.card3 div:nth-child(3) button {
+.card3-button {
+    margin: 0px;
     background-color: hsl(176, 50%, 47%);
     color: white;
     font-family: 'Commissioner';
@@ -677,7 +670,7 @@ div[bookmark_btn_inside-bookmarked] {
     width: 150px;
     height: 40px;
     border: none;
-    margin-left: 435px;
+    margin-left: 344px;
 }
 
 .card3 div:nth-child(3) button:hover {
