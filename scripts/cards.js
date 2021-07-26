@@ -84,6 +84,8 @@ export function cards() {
     $input1_continue.appendChild($input1_btn);
     $input1_btn.textContent = 'Continue';
     let $continue_btn_01 = d.querySelector('.input1_btn')
+    let $radio1 = d.getElementById('radio1');
+
 
     // Hacemos que el botón cierre toda la tarjeta:
 
@@ -106,7 +108,10 @@ export function cards() {
     let $span1_02 = d.createElement('span');
     let $input2_btn = d.createElement('button');
     let $input2_number = d.createElement('input');
+    let $card2_number = d.querySelector('.card2_number');
     let $ = d.createElement('p');
+    let $radio2 = d.getElementById('radio2');
+
     $input2_continue.appendChild($span1_02);
     $input2_continue.appendChild($);
     $input2_continue.appendChild($input2_number);
@@ -135,9 +140,12 @@ export function cards() {
         // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
         let $no_floatTy = d.querySelector('.no_floating_thank_card');
         let $floating_divTy = d.querySelector('.floating_div');
-        $floating_divTy.classList.add('floating_thank_card_zone')
-        $no_floatTy.classList.add('floating_thank_card')
-        $no_floatTy.classList.remove('no_floating_thank_card')
+        $floating_divTy.classList.add('floating_thank_card_zone');
+        $no_floatTy.classList.add('floating_thank_card');
+        $no_floatTy.classList.remove('no_floating_thank_card');
+        $card2_number.textContent = parseFloat($card2_number.textContent) - 1;
+        let $card1_n = d.querySelector('.card1>div:nth-child(3)>h3');
+        $card1_n.innerText = $card2_number.textContent;
     })
 
 
@@ -146,6 +154,8 @@ export function cards() {
     let $span1_03 = d.createElement('span');
     let $input3_btn = d.createElement('button');
     let $input3_number = d.createElement('input');
+    let $card3_number = d.querySelector('.card3_number');
+    let $radio3 = d.getElementById('radio3');
     let $_02 = d.createElement('p');
     $input3_continue.appendChild($span1_03);
     $input3_continue.appendChild($_02)
@@ -169,27 +179,36 @@ export function cards() {
 
     $input3_btn.addEventListener('click', function() {
 
-        $no_floating_card_zone.classList.add('no_floating_card_zone')
+        $no_floating_card_zone.classList.add('no_floating_card_zone');
         $no_floating_card_zone.classList.remove('floating_card_zone');
         $dFragm.style.top = 950 + 'px'
         $dFragm_position = 950;
         // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
         let $no_floatTy = d.querySelector('.no_floating_thank_card');
         let $floating_divTy = d.querySelector('.floating_div');
-        $floating_divTy.classList.add('floating_thank_card_zone')
-        $no_floatTy.classList.add('floating_thank_card')
-        $no_floatTy.classList.remove('no_floating_thank_card')
+        $floating_divTy.classList.add('floating_thank_card_zone');
+        $no_floatTy.classList.add('floating_thank_card');
+        $no_floatTy.classList.remove('no_floating_thank_card');
+        $card3_number.textContent = parseFloat($card3_number.textContent) - 1;
+
+        let $card2_n = d.querySelector('.card2>div:nth-child(3)>h3');
+        $card2_n.innerText = $card3_number.textContent;
+
     })
 
     let $dFragmCard4 = d.querySelector(".dFragm-card4");
     let $input4 = d.querySelector('.radio4__input');
     let $input4_continue = d.createElement('div');
-    $input4_continue.setAttribute('style', 'display:flex;')
-
+    $input4_continue.setAttribute('style', 'display:flex;');
+    let $radio4 = d.getElementById('radio4');
+    let $card4_span = d.querySelector('.card4_span');
+    let $radio4_container = d.querySelector('.radio4');
+    let $card4_number = d.querySelector('.card4_number');
     let $span1_04 = d.createElement('span');
     let $input4_btn = d.createElement('button');
     let $input4_number = d.createElement('input');
     let $_03 = d.createElement('p');
+
     $dFragmCard4.appendChild($input4_continue);
     $input4_continue.appendChild($span1_04);
     $input4_continue.appendChild($_03)
@@ -219,13 +238,42 @@ export function cards() {
         $floating_divTy.classList.add('floating_thank_card_zone')
         $no_floatTy.classList.add('floating_thank_card')
         $no_floatTy.classList.remove('no_floating_thank_card')
-    })
+        $card4_number.textContent = parseFloat($card4_number.textContent) - 1;
+        if (parseFloat($card4_number.textContent) === 0) {
+            let $card3 = d.querySelector('.card3');
+            let $card3_title = d.querySelector('.card3>div>h3');
+            let $card3_span = d.querySelector('.card3>div>span');
+            let $card3_p = d.querySelector('.card3>div:nth-child(2)>p');
+            let $card3_n = d.querySelector('.card3>div:nth-child(3)>h3');
+            let $card3_left = d.querySelector('.card3>div:nth-child(3)>p');
+
+            $dFragmCard4.setAttribute('style', 'color:rgb(242, 242, 242, 0.6); background-color: rgb(242, 242, 242, 0.6);');
+            $radio4_container.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            $card4_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4)');
+            // Manejo del CSSOM:
+            document.styleSheets[1].cssRules[63].style.backgroundColor = 'rgb(180, 180, 180,0.4)';
+            document.styleSheets[1].cssRules[61].style = '';
+            $card4_number.setAttribute('style', 'color: lightgray');
+            $input4_number.setAttribute('style', 'color: lightgray');
+            $input4_btn.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $radio4.setAttribute('disabled', 'true');
+            $card3_button.setAttribute('disabled', 'true');
+            $card3_button.setAttribute('style', 'background-color:rgb(180, 180, 180,0.4);');
+            $card3.setAttribute('style', 'background-color: rgb(242, 242, 242, 0.6);')
+            $card3_title.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card3_span.setAttribute('style', 'color: rgb(180, 180, 180,0.4);')
+            $card3_p.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card3_n.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+            $card3_n.innerText = $card4_number.textContent;
+            $card3_left.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
+        }
+
+    });
 
 
 
 
 
-    let $radio1 = d.getElementById('radio1');
     $radio1.addEventListener('change', function() {
         if ($radio1.checked === true) {
             $input1_continue.style = 'display:flex;';
@@ -283,7 +331,6 @@ export function cards() {
 
 
 
-    let $radio2 = d.getElementById('radio2');
     $radio2.addEventListener('change', function() {
         if ($radio2.checked === true) {
             $input1_continue.style = 'display:none;';
@@ -337,7 +384,6 @@ export function cards() {
 
     });
 
-    let $radio3 = d.getElementById('radio3');
     $radio3.checked = true;
     $radio3.addEventListener('change', function() {
         if ($radio3.checked === true) {
@@ -391,8 +437,6 @@ export function cards() {
     });
 
 
-
-    let $radio4 = d.getElementById('radio4');
     $radio4.addEventListener('change', function() {
         if ($radio4.checked === true) {
             $input1_continue.style = 'display:none;';
@@ -496,7 +540,7 @@ export function animation_btn() {
         // AÑADIMOS EL JAVASCRIPT DEL BOTÓN DE CERRAR EN CADA EVENTO
 
         $close_btn.addEventListener('click', function() {
-            $no_floating_card_zone.classList.add('no_floating_card_zone')
+            $no_floating_card_zone.classList.add('no_floating_card_zone');
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
             console.log('Close button executing');
@@ -519,7 +563,7 @@ export function animation_btn() {
         // AÑADIMOS EL JAVASCRIPT DEL BOTÓN DE CERRAR EN CADA EVENTO
 
         $close_btn.addEventListener('click', function() {
-            $no_floating_card_zone.classList.add('no_floating_card_zone')
+            $no_floating_card_zone.classList.add('no_floating_card_zone');
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
             // $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
@@ -537,7 +581,7 @@ export function animation_btn() {
         // console.log($floating_card_zone);
 
         $close_btn.addEventListener('click', function() {
-            $no_floating_card_zone.classList.add('no_floating_card_zone')
+            $no_floating_card_zone.classList.add('no_floating_card_zone');
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
             $dFragm.style.top = 950 + 'px'
@@ -556,7 +600,7 @@ export function animation_btn() {
         // console.log($floating_card_zone);
 
         $close_btn.addEventListener('click', function() {
-            $no_floating_card_zone.classList.add('no_floating_card_zone')
+            $no_floating_card_zone.classList.add('no_floating_card_zone');
             $no_floating_card_zone.classList.remove('floating_card_zone');
 
             $dFragm.style.top = 950 + 'px'
@@ -564,10 +608,8 @@ export function animation_btn() {
         })
 
     });
-
-
-
 }
+
 
 // BOTÓN DE CARTA DE AGRADECIMIENTO
 
@@ -576,18 +618,8 @@ $thank_btn.addEventListener('click', function() {
 
     let $floatTy = d.querySelector('.floating_thank_card');
     let $floating_divTy = d.querySelector('.floating_div');
-    $floating_divTy.classList.remove('floating_thank_card_zone')
-    $floatTy.classList.add('no_floating_thank_card')
-    $floatTy.classList.remove('floating_thank_card')
+    $floating_divTy.classList.remove('floating_thank_card_zone');
+    $floatTy.classList.add('no_floating_thank_card');
+    $floatTy.classList.remove('floating_thank_card');
 
-
-
-
-})
-
-// // Evento para que al darle a continuar, aparezca la tarjeta final de agradecimiento:
-// let $no_floatTy = d.querySelector('.no_floating_thank_card');
-// let $floating_divTy = d.querySelector('.floating_div');
-// $floating_divTy.classList.add('floating_thank_card_zone')
-// $no_floatTy.classList.add('floating_thank_card')
-// $no_floatTy.classList.remove('no_floating_thank_card')
+});
