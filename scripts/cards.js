@@ -445,6 +445,8 @@ export function cards() {
                 }
 
             }, 1);
+
+            // PARA LAS DIMENSIONES DE TABLET:
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
@@ -456,6 +458,19 @@ export function cards() {
 
                 }, 1);
             }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
         } else {
             var $card1_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -467,11 +482,26 @@ export function cards() {
                     clearInterval($card1_interval);
                 }
             }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
+
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         $dFragm.style.height = '84.5%';
                         $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
                         console.log(window.scrollY)
                         window.scrollTo(0, 0)
                     }
@@ -524,6 +554,8 @@ export function cards() {
                 }
 
             }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
+
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
@@ -535,6 +567,19 @@ export function cards() {
 
                 }, 1);
             }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
         } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -546,6 +591,7 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
@@ -558,6 +604,19 @@ export function cards() {
 
                 }, 1);
             }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
         }
 
 
@@ -598,6 +657,8 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 4);
+            // PARA LAS DIMENSIONES DE TABLET:
+
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
@@ -609,6 +670,19 @@ export function cards() {
 
                 }, 1);
             }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
         } else {
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
@@ -620,15 +694,33 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    $dFragm.style.height = '84.5%';
-                    $dFragm.style.top = '70px';
-                    console.log(window.scrollY)
-                    window.scrollTo(0, 0)
-                }
 
-            }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
+
+            if (window.innerWidth < 769 && window.innerHeight < 1025) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        $dFragm.style.height = '84.5%';
+                        $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
         }
 
     });
@@ -672,6 +764,8 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
+
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
@@ -683,6 +777,19 @@ export function cards() {
 
                 }, 1);
             }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+
 
         } else {
             let $card3_interval = setInterval(() => {
@@ -695,11 +802,25 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+            // PARA LAS DIMENSIONES DE TABLET:
+
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         $dFragm.style.height = '84.5%';
                         $dFragm.style.top = '70px';
+                        console.log(window.scrollY)
+                        window.scrollTo(0, 0)
+                    }
+
+                }, 1);
+            }
+            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                        // $dFragm.style.height = '100%';
+                        $dFragm.style.top = '-50px';
+                        $dFragm.style.opacity = '0.96';
                         console.log(window.scrollY)
                         window.scrollTo(0, 0)
                     }
