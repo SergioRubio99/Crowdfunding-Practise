@@ -755,6 +755,8 @@ div[bookmark_btn_inside-bookmarked] {
         font-size: 30px;
     }
     .navigation>ul {
+        border-radius: 10px;
+        opacity: 0.85;
         display: flex;
         padding: 0px;
         margin: 0px;
@@ -766,7 +768,10 @@ div[bookmark_btn_inside-bookmarked] {
         position: relative;
         left: 46px;
         top: 163px;
-        z-index: 0;
+        z-index: -1;
+    }
+    .nav_mobile_menu_visible {
+        z-index: 0 !important;
     }
     .navigation>ul>li {
         display: flex;
@@ -796,4 +801,154 @@ div[bookmark_btn_inside-bookmarked] {
         padding: 0 20px;
         line-height: 60px;
     }
+    /* INICIO DE LA PRIMERA SECCIÓN */
+    .body_wrap {
+        margin: auto;
+        /* border: 1px solid black; */
+        height: 100%;
+        width: 85%;
+    }
+    .first_section {
+        position: relative;
+        top: -87px;
+        height: 256px;
+        background-color: white;
+        border-radius: 10px;
+        /* border: 1px solid black; */
+        border: 1px solid rgb(224, 224, 224);
+    }
+    .logo {
+        display: block;
+        position: static;
+        margin-top: -29px;
+        margin-bottom: 29px;
+    }
+    .flex_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+    .flex_container>h2 {
+        margin-top: -10px;
+        width: 100%;
+        text-align: center;
+        font-family: 'CommissionerBold';
+        font-size: 25px;
+    }
+    .flex_container>p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin-left: 24px;
+        height: 50px;
+        font-family: 'Commissioner';
+        font-weight: 100;
+        color: rgb(146, 146, 146);
+        margin-top: 8px;
+    }
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .back_this_project_btn {
+        background-color: hsl(176, 50%, 47%);
+        color: white;
+        font-family: 'Commissioner';
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50px;
+        width: 205px;
+        height: 55px;
+        border: none;
+        margin-top: 15px;
+        margin-left: 13px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .back_this_project_btn:hover {
+        background-color: hsl(176, 72%, 28%)
+    }
+    .bookmark_btn {
+        display: flex;
+        position: relative;
+        align-content: center;
+        border: none;
+        width: 54px;
+        margin-right: 0px;
+        border-radius: 50px;
+        color: rgb(116, 116, 116);
+        background-color: rgb(230, 230, 230);
+        font-family: 'CommissionerBold';
+        margin-top: 15px;
+        font-size: 16px;
+        height: 55px;
+        cursor: pointer;
+        padding: 0px;
+        margin: 0px;
+        top: 15px;
+        margin-right: 5%;
+    }
+    .bookmark_btn:hover {
+        opacity: 0.7;
+    }
+    .bookmark_btn p {
+        display: flex;
+        margin-right: 20px;
+        align-self: center;
+        display: none;
+    }
+    .bookmark_btn_inside {
+        background-color: rgb(54, 54, 54);
+        width: 55px;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        float: none;
+        border-radius: 40px;
+        padding: 0px;
+        margin-top: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .bookmark_btn_inside-no-firefox {
+        background-color: rgb(54, 54, 54);
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        float: none;
+        border-radius: 40px;
+    }
+    .bookmark_btn_inside img {
+        position: relative;
+        display: flex;
+        max-width: 21px;
+        margin-left: 16.9px;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    .bookmark_btn_inside-no-firefox img {
+        position: relative;
+        display: flex;
+        max-width: 21px;
+        margin-left: 16.9px;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    /* bookmark_btn.toggleAttribute("bookmark-btn_bookmarked");
+bookmark_btn_inside.toggleAttribute('bookmark_btn_inside-bookmarked');
+img.toggleAttribute('img-bookmarked');
+p.toggleAttribute('p-bookmarked'); */
+    button[bookmark_btn_inside-bookmarked] {
+        margin-right: auto;
+    }
+    button[bookmark-btn-bookmarked] {
+        width: auto;
+    }
+    div[bookmark_btn_inside-bookmarked] {
+        background-color: hsl(176, 50%, 36%);
+    }
+    /* FIN DE LA PRIMERA SECCIÓN */
 }

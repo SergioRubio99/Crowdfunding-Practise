@@ -3,8 +3,8 @@ let d = document;
 export let bookmark = function() {
     let bookmark_btn = d.querySelector('.bookmark_btn')
     let bookmark_btn_inside = d.querySelector('.bookmark_btn_inside');
-    let img = bookmark_btn_inside.firstChild;
-    let p = bookmark_btn.lastChild;
+    let img = d.querySelector('.bookmark_btn_inside>img');
+    let p = d.querySelector('.bookmark_btn>p');
     console.log(img)
     console.log(p)
 
@@ -29,8 +29,8 @@ export let bookmark = function() {
         }
         console.log(img);
         //Atención al objeto img, que en src no tenía la ruta al uso del archivo favicon.ico, sino la que le daba el live server.
-
-        if (img.src === 'http://127.0.0.1:5500/PR%C3%81CTICAS/crowdfunding-product-page-main/css/favicon.ico') {
+        console.log(img.src)
+        if (img.src === 'http://127.0.0.1:5500/css/favicon.ico') {
             img.setAttribute('src', './css/favicon_white.png')
         } else {
             img.setAttribute('src', './css/favicon.ico')

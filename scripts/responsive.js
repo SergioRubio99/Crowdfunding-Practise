@@ -9,3 +9,11 @@ export function responsive_card() {
             // $dFragm.setAttribute('style', 'top:70px; height:90%; width:90%;')
     }
 }
+
+export function nav_btn() {
+    let $menu = d.querySelector('.navigation>ul');
+    let $mobile_btn = d.querySelector('.toggle');
+    $mobile_btn.addEventListener('click', function() {
+        $menu.classList.toggle('nav_mobile_menu_visible')
+    })
+}
