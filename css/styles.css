@@ -992,7 +992,9 @@ p.toggleAttribute('p-bookmarked'); */
         margin: 0px;
         font-size: 1.1em;
         font-family: 'Commissioner';
-        color: rgb(146, 146, 146)
+        color: rgb(146, 146, 146);
+        width: 100%;
+        text-align: center;
     }
     .border {
         position: absolute;
