@@ -46,10 +46,10 @@ body {
 
 .header {
     background-image: url('../images/image-hero-desktop.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     height: 372px;
-    width: 100%;
+    width: 400px;
 }
 
 .navigation {
@@ -739,7 +739,7 @@ div[bookmark_btn_inside-bookmarked] {
     .header {
         background-image: url('../images/image-hero-mobile.jpg');
         background-position: center;
-        width: 372px;
+        width: 500px;
     }
     .navigation {
         margin: 0px;
