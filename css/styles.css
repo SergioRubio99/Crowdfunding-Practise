@@ -843,11 +843,11 @@ div[bookmark_btn_inside-bookmarked] {
         width: 95%;
         margin-left: 24px;
         padding-right: 24px;
-        height: 50px;
         font-family: 'Commissioner';
         font-weight: 100;
         color: rgb(146, 146, 146);
         margin-top: 8px;
+        height: auto;
     }
     .buttons {
         width: 100%;
@@ -1041,7 +1041,7 @@ p.toggleAttribute('p-bookmarked'); */
         color: rgb(146, 146, 146);
     }
     .progress_bar {
-        width: 70%;
+        width: 90%;
         height: 10px;
         background-color: rgb(219, 219, 219);
         border-radius: 10px;
@@ -1054,4 +1054,298 @@ p.toggleAttribute('p-bookmarked'); */
         margin: 0px;
     } */
     /* FIN DE LA SEGUNDA SECCIÓN */
+    /* INICIO DE LA TERCERA SECCIÓN */
+    .third_section {
+        position: relative;
+        flex-direction: column;
+        top: -36px;
+        border: 1px solid rgb(231, 231, 231);
+        background-color: white;
+        border-radius: 10px;
+        /* border: 1px solid black; */
+    }
+    .third_section .flex_container {
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .third_section .flex_container h2 {
+        font-size: 1.3em;
+        text-align: start;
+        margin: 0px;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .third_section .flex_container p:nth-child(2),
+    .third_section .flex_container p:nth-child(3) {
+        font-family: 'Commissioner';
+        text-align: start;
+        margin-bottom: 30px;
+        width: 85%;
+        word-spacing: 1px;
+        line-height: 1.8;
+        font-size: 15px;
+        padding-right: 0px;
+    }
+    /* PRIMERA CARTA */
+    .third_section_card {
+        margin-bottom: 22px;
+        display: flex;
+        width: 85%;
+        border: 1px solid blue;
+        border: 1px solid rgb(211, 211, 211);
+        border-radius: 7px;
+        flex-direction: column;
+        padding: 5px 0px 0px 0px;
+        padding-left: 7px;
+    }
+    .third_section_card div {
+        width: 100%;
+        /* border: 1px solid black; */
+        border-radius: 3px;
+        flex-wrap: wrap;
+    }
+    .card1 div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        margin-top: 20px;
+    }
+    .card1 div h3 {
+        margin-left: 15px;
+        margin-right: 0px;
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+    .card1 div span {
+        font-family: 'Commissioner';
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.4px;
+        color: rgb(23, 165, 151);
+        margin-left: 15px;
+        margin-right: auto;
+        flex-basis: 100%;
+    }
+    .card1 div:nth-child(2) {
+        display: flex;
+        height: 70px;
+        align-items: center;
+    }
+    .card1 p:nth-child(1) {
+        font-family: 'Commissioner';
+        color: rgb(131, 131, 131);
+        margin-right: 5px;
+        margin-left: 15px;
+        width: 100%;
+        line-height: auto;
+        font-size: 15.4px;
+    }
+    .card1 div:nth-child(3) {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        margin-top: 70px;
+        width: 100%;
+    }
+    .card1 div:nth-child(3) h3 {
+        font-family: 'CommissionerBold';
+        font-size: 2em;
+        margin: 0px;
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+    .card1 div:nth-child(3) span {
+        flex-basis: 30%;
+        color: rgb(116, 116, 116);
+        margin: 0px;
+    }
+    .card1-button {
+        margin: 0px;
+        background-color: hsl(176, 50%, 47%);
+        color: white;
+        font-family: 'Commissioner';
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50px;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 14px !important;
+        margin-top: -50px;
+    }
+    .card1 div:nth-child(3) button:hover {
+        background-color: hsl(176, 50%, 36%);
+    }
+    /* FIN DE LA PRIMERA CARTA */
+    /* SEGUNDA CARTA */
+    .card2 div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        margin-top: 20px;
+    }
+    .card2 div h3 {
+        margin-left: 15px;
+        margin-right: 0px;
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+    .card2 div h3:nth-child(1) {
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        margin-left: 15px;
+        margin-right: 0px;
+        font-size: 1.1em;
+    }
+    .card2 div span {
+        font-family: 'Commissioner';
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.4px;
+        color: rgb(23, 165, 151);
+        margin-left: 15px;
+        margin-right: auto;
+        flex-basis: 100%;
+    }
+    .card2 div:nth-child(2) {
+        display: flex;
+        height: 70px;
+        align-items: center;
+    }
+    .card2 p:nth-child(1) {
+        font-family: 'Commissioner';
+        color: rgb(131, 131, 131);
+        margin-right: 5px;
+        margin-left: 15px;
+        width: 100%;
+        line-height: auto;
+        font-size: 15.4px;
+    }
+    .card2 div:nth-child(3) {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .card2 div:nth-child(3) h3 {
+        font-family: 'CommissionerBold';
+        font-size: 2em;
+        margin: 0px;
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+    .card2 div:nth-child(3) span {
+        flex-basis: 30%;
+        color: rgb(116, 116, 116);
+        margin: 0px;
+    }
+    .card2-button {
+        margin: 0px;
+        background-color: hsl(176, 50%, 47%);
+        color: white;
+        font-family: 'Commissioner';
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50px;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 14px !important;
+        margin-top: -50px;
+    }
+    .card2 div:nth-child(3) button:hover {
+        background-color: hsl(176, 50%, 36%);
+    }
+    /* FIN DE LA SEGUNDA CARTA */
+    /* TERCERA CARTA */
+    .card3 div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        margin-top: 20px;
+    }
+    .card3 div h3 {
+        margin-left: 15px;
+        margin-right: 0px;
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+    .card3 div h3:nth-child(1) {
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        margin-left: 15px;
+        margin-right: 0px;
+        font-size: 1.1em;
+    }
+    .card3 div span {
+        font-family: 'Commissioner';
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.4px;
+        color: rgb(23, 165, 151);
+        margin-left: 15px;
+        margin-right: auto;
+        flex-basis: 100%;
+    }
+    .card3 div:nth-child(2) {
+        display: flex;
+        height: 70px;
+        align-items: center;
+    }
+    .card3 p:nth-child(1) {
+        font-family: 'Commissioner';
+        color: rgb(131, 131, 131);
+        margin-right: 5px;
+        margin-left: 15px;
+        width: 100%;
+        line-height: auto;
+        font-size: 15.4px;
+    }
+    .card3 div:nth-child(3) {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        margin-top: 70px;
+        width: 100%;
+    }
+    .card3 div:nth-child(3) h3 {
+        font-family: 'CommissionerBold';
+        font-size: 2em;
+        margin: 0px;
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+    .card3 div:nth-child(3) span {
+        flex-basis: 30%;
+        color: rgb(116, 116, 116);
+        margin: 0px;
+    }
+    .card3-button {
+        margin: 0px;
+        background-color: hsl(176, 50%, 47%);
+        color: white;
+        font-family: 'Commissioner';
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50px;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 14px !important;
+        margin-top: -50px;
+    }
+    .card3 div:nth-child(3) button:hover {
+        background-color: hsl(176, 50%, 36%);
+    }
+    /* FIN DE LA TERCERA CARTA */
+    /* FIN DE LA TERCERA SECCIÓN */
 }
