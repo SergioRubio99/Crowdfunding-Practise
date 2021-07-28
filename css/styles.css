@@ -49,7 +49,7 @@ body {
     background-repeat: repeat;
     background-size: cover;
     height: 372px;
-    width: 400px;
+    width: 100%;
 }
 
 .navigation {
@@ -128,7 +128,7 @@ body {
 .logo {
     position: relative;
     top: -26px;
-    left: 340px;
+    left: 329px;
 }
 
 .flex_container {
@@ -736,7 +736,11 @@ div[bookmark_btn_inside-bookmarked] {
 
 @media (max-width: 740px) {
     /* BARRRA DE NAVEGACIÓN */
+    body {
+        overflow: hidden;
+    }
     .header {
+        overflow: hidden;
         background-image: url('../images/image-hero-mobile.jpg');
         background-position: center;
         width: 500px;
@@ -798,7 +802,7 @@ div[bookmark_btn_inside-bookmarked] {
         background: none;
         border: none;
         font-size: 30px;
-        padding: 0 20px;
+        padding: 0 5px 0 0px;
         line-height: 60px;
     }
     /* INICIO DE LA PRIMERA SECCIÓN */
@@ -951,4 +955,103 @@ p.toggleAttribute('p-bookmarked'); */
         background-color: hsl(176, 50%, 36%);
     }
     /* FIN DE LA PRIMERA SECCIÓN */
+    /* INICIO DE LA SEGUNDA SECCIÓN */
+    .second_section {
+        position: relative;
+        top: -63px;
+        border: 1px solid rgb(231, 231, 231);
+        height: 600px;
+        background-color: white;
+        border-radius: 10px;
+        /* border: 1px solid black; */
+    }
+    .second_section .flex_container {
+        width: 90%;
+        padding-top: 43px;
+    }
+    .second_section_container {
+        font-family: 'CommissionerBold';
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0px auto;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    .second_section_container:nth-child(1) {
+        margin-bottom: 10px;
+    }
+    .second_section_container:nth-child(1)>h2 {
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 2.5em;
+        margin: 0px;
+        margin-bottom: -20px;
+    }
+    .second_section_container:nth-child(1)>span {
+        margin: 0px;
+        font-size: 1.1em;
+        font-family: 'Commissioner';
+        color: rgb(146, 146, 146)
+    }
+    .border {
+        position: absolute;
+        top: 143px;
+        background-color: rgb(224, 224, 224);
+        width: 130px;
+        height: 1px;
+    }
+    .second_section_container:nth-child(2) {
+        margin-bottom: 10px;
+    }
+    .second_section_container:nth-child(2)>h2 {
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 2.5em;
+        margin: 0px;
+        margin-bottom: -30px;
+    }
+    .second_section_container:nth-child(2)>span {
+        text-align: center;
+        margin: 0px;
+        width: 100%;
+        font-size: 1.1em;
+        font-family: 'Commissioner';
+        color: rgb(146, 146, 146);
+    }
+    .border2 {
+        position: absolute;
+        top: 295px;
+        background-color: rgb(224, 224, 224);
+        width: 130px;
+        height: 1px;
+    }
+    .second_section_container:nth-child(3)>h2 {
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        font-size: 2.5em;
+        margin: 0px;
+        margin-bottom: -30px;
+    }
+    .second_section_container:nth-child(3)>span {
+        text-align: center;
+        margin: 0px;
+        width: 100%;
+        font-size: 1.1em;
+        font-family: 'Commissioner';
+        color: rgb(146, 146, 146);
+    }
+    .progress_bar {
+        width: 95%;
+        height: 10px;
+        background-color: rgb(219, 219, 219);
+        border-radius: 10px;
+    }
+    .progress {
+        height: 100%;
+        border-radius: 10px;
+        background-color: lightseagreen;
+        margin: 0px;
+    }
+    /* FIN DE LA SEGUNDA SECCIÓN */
 }

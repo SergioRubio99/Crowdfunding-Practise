@@ -100,7 +100,14 @@ export function cards() {
         let $floating_divTy = d.querySelector('.floating_div');
         $floating_divTy.classList.add('floating_thank_card_zone')
         $no_floatTy.classList.add('floating_thank_card')
-        $no_floatTy.classList.remove('no_floating_thank_card')
+        $no_floatTy.classList.remove('no_floating_thank_card');
+
+        // Para añadir +1 al nº de backers:
+        let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
+        backers += 1;
+        backers = backers.toString();
+        backers = backers.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        d.querySelector('.second_section_container:nth-child(2)>h2').innerText = backers;
 
     })
 
@@ -159,7 +166,7 @@ export function cards() {
         container$ = container$.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         total$.innerText = container$;
 
-        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
+        // Para añadir +1 al nº de backers:
         let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
         backers += 1;
         backers = backers.toString();
@@ -293,8 +300,7 @@ export function cards() {
             $card2_left.setAttribute('style', 'color: rgb(180, 180, 180,0.4);');
             $card3_span.setAttribute('style', 'color:rgb(180, 180, 180,0.4);');
         }
-        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
-
+        // Para añadir +1 al nº de backers:
         let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
         backers += 1;
         backers = backers.toString();
@@ -392,8 +398,7 @@ export function cards() {
         container$ = container$.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         total$.innerText = container$;
 
-        // CÓDIGO PARA HACER QUE AUMENTE EN 1 EL NÚMERO DE CONTRIBUYENTES AL SELECCIONAR UN REWARD:
-
+        // Para añadir +1 al nº de backers:
         let backers = parseFloat(d.querySelector('.second_section_container:nth-child(2)>h2').textContent.replace(',', ''));
         backers += 1;
         backers = backers.toString();
