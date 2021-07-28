@@ -995,6 +995,8 @@ setInterval(() => {
         $card1_btn.setAttribute('style', 'margin-left:350px; background-color:rgba(180, 180, 180, 0.4);')
     }
 
+    // ANOTACIÓN IMPORTANTE: EN EL DISEÑO RESPONSIVE, HE UTILIZADO UN !IMPORTANT PARA SOBREESCRIBIR LOS ESTILOS APLICADOS AQUÍ. lA FORMA IDEAL DE RESOLVER ESTO ES USANDO FLEX-WRAP PARA EL ELEMENTO PADRE, Y FLEX-BASIS:; PARA EL ELEMENTO HIJO. DE ESTA FORMA, AL CAMBIAR EL NÚMERO, YA SEA 101, 63, 1 ó 0, NO HABRÁ DESAJUSTE ALGUNO. 
+
 }, 1);
 
 let $adjust_card2 = d.querySelector('.card2>div:nth-child(3)>h3');
