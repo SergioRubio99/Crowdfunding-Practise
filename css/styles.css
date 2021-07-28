@@ -736,9 +736,6 @@ div[bookmark_btn_inside-bookmarked] {
 
 @media (max-width: 740px) {
     /* BARRRA DE NAVEGACIÓN */
-    body {
-        overflow: hidden;
-    }
     .header {
         overflow: hidden;
         background-image: url('../images/image-hero-mobile.jpg');
