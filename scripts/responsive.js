@@ -16,4 +16,12 @@ export function nav_btn() {
     $mobile_btn.addEventListener('click', function() {
         $menu.classList.toggle('nav_mobile_menu_visible')
     })
+
+}
+
+export function noScroll() {
+    // setInterval(() => {
+    //     window.scrollTo(0, 0);
+    // }, 1);
+
 }
