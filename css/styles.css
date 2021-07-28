@@ -830,10 +830,10 @@ div[bookmark_btn_inside-bookmarked] {
     }
     .flex_container>h2 {
         margin-top: -10px;
-        width: 100%;
+        width: 90%;
         text-align: center;
         font-family: 'CommissionerBold';
-        font-size: 25px;
+        font-size: 22px;
     }
     .flex_container>p {
         display: flex;
@@ -841,6 +841,7 @@ div[bookmark_btn_inside-bookmarked] {
         align-items: center;
         width: 95%;
         margin-left: 24px;
+        padding-right: 24px;
         height: 50px;
         font-family: 'Commissioner';
         font-weight: 100;
@@ -914,7 +915,6 @@ div[bookmark_btn_inside-bookmarked] {
     }
     .bookmark_btn_inside-no-firefox {
         background-color: rgb(54, 54, 54);
-        width: 100%;
         height: 100%;
         margin: 0px;
         padding: 0px;
