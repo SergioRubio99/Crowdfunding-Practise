@@ -69,17 +69,21 @@ body {
     font-size: 26px;
 }
 
-.navigation>div {
+.navigation>ul {
     display: flex;
     /* border: 1px solid black; */
     height: 100%;
     width: 245px;
     align-items: flex-end;
     justify-content: space-around;
-    margin-right: 185px;
+    margin-right: 300px;
 }
 
-.navigation>div>a {
+.navigation>ul>li {
+    list-style: none;
+}
+
+.navigation>ul>li>a {
     text-decoration: none;
     color: white;
     font-family: "Commissioner";
@@ -87,8 +91,12 @@ body {
     font-weight: normal;
 }
 
-.navigation>div>a:hover {
+.navigation>ul>li>a:hover {
     text-decoration: underline;
+}
+
+.toggle {
+    display: none;
 }
 
 
@@ -722,3 +730,70 @@ div[bookmark_btn_inside-bookmarked] {
 
 
 /* FIN DE LAS SECCIONES */
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 740px) {
+    /* BARRRA DE NAVEGACIÓN */
+    .header {
+        background-image: url('../images/image-hero-mobile.jpg');
+        background-position: center;
+        width: 372px;
+    }
+    .navigation {
+        margin: 0px;
+        height: 60px;
+        width: 40px;
+        color: white;
+    }
+    .navigation h1 {
+        font-family: "commissionerBold";
+        font-weight: 300;
+        cursor: default;
+        margin-left: 30px;
+        font-size: 30px;
+    }
+    .navigation>ul {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        flex-direction: column;
+        /* border: 1px solid black; */
+        background-color: white;
+        height: 150px;
+        margin: 0px;
+        position: relative;
+        left: 46px;
+        top: 163px;
+        z-index: 0;
+    }
+    .navigation>ul>li {
+        display: flex;
+        justify-content: center;
+        width: 130px;
+        margin: 0px;
+    }
+    .navigation>ul>li>a {
+        margin: 0px;
+        text-decoration: none;
+        color: white;
+        font-family: "Commissioner";
+        font-size: 14px;
+        color: rgb(54, 54, 54);
+        font-weight: normal;
+        font-size: 20px;
+    }
+    .navigation>ul>li>a:hover {
+        text-decoration: underline;
+    }
+    .toggle {
+        color: white;
+        display: flex;
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+}

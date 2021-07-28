@@ -458,7 +458,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -496,7 +496,7 @@ export function cards() {
                 }, 1);
             }
 
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -567,7 +567,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -604,7 +604,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -670,7 +670,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -708,7 +708,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -757,13 +757,13 @@ export function cards() {
             let $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 3);
+            }, 0.5);
 
             setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
+                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
-            }, 1);
+            }, 0.5);
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -777,7 +777,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
@@ -815,7 +815,7 @@ export function cards() {
 
                 }, 1);
             }
-            if (window.innerWidth < 1025 && window.innerHeight < 769) {
+            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
