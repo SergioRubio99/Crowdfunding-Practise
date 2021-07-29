@@ -740,9 +740,8 @@ div[bookmark_btn_inside-bookmarked] {
         display: flex;
         flex-direction: column;
         /* min-height: 100%; */
-        width: 363px;
+        width: 100%;
         overflow-x: hidden;
-        overflow-y: hidden;
     }
     /* BARRRA DE NAVEGACIÓN */
     .header {
