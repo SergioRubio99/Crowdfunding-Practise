@@ -29,7 +29,7 @@ nav_btn();
 // }
 
 window.addEventListener('load', noScroll);
-
+window.scrollTo(0, 0)
 setInterval(() => {
     if (window.innerWidth < 769) {
         console.log('Scrolling function!')

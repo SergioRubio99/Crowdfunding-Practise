@@ -735,6 +735,15 @@ div[bookmark_btn_inside-bookmarked] {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 740px) {
+    body {
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        /* min-height: 100%; */
+        width: 363px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     /* BARRRA DE NAVEGACIÓN */
     .header {
         background-image: url('../images/image-hero-mobile.jpg');
