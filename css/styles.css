@@ -3,11 +3,6 @@
     box-sizing: border-box;
 }
 
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
 body {
     background-color: #f7f7f7;
     display: flex;
@@ -740,6 +735,10 @@ div[bookmark_btn_inside-bookmarked] {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 740px) {
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
     body {
         background-color: #f7f7f7;
         display: flex;
