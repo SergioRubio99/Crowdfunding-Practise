@@ -452,29 +452,29 @@ export function cards() {
             }, 1);
 
             // PARA LAS DIMENSIONES DE TABLET:
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
+            // if (window.innerWidth < 769 && window.innerHeight < 1025) {
+            //     setInterval(() => {
+            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+            //             $dFragm.style.height = '84.5%';
+            //             $dFragm.style.top = '70px';
+            //             console.log(window.scrollY)
+            //             window.scrollTo(0, 0)
+            //         }
 
-                }, 1);
-            }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
+            //     }, 1);
+            // }
+            // if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
+            //     setInterval(() => {
+            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+            //             // $dFragm.style.height = '100%';
+            //             $dFragm.style.top = '-50px';
+            //             $dFragm.style.opacity = '0.96';
+            //             console.log(window.scrollY)
+            //             window.scrollTo(0, 0)
+            //         }
 
-                }, 1);
-            }
+            //     }, 1);
+            // }
 
         } else {
             var $card1_interval = setInterval(() => {
@@ -489,30 +489,30 @@ export function cards() {
             }, 1);
             // PARA LAS DIMENSIONES DE TABLET:
 
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
+            // if (window.innerWidth < 769 && window.innerHeight < 1025) {
+            //     setInterval(() => {
+            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+            //             $dFragm.style.height = '84.5%';
+            //             $dFragm.style.top = '70px';
+            //             console.log(window.scrollY)
+            //             window.scrollTo(0, 0)
+            //         }
 
-                }, 1);
-            }
+            //     }, 1);
+            // }
 
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
+            // if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
+            //     setInterval(() => {
+            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+            //             // $dFragm.style.height = '100%';
+            //             $dFragm.style.top = '-50px';
+            //             $dFragm.style.opacity = '0.96';
+            //             console.log(window.scrollY)
+            //             window.scrollTo(0, 0)
+            //         }
 
-                }, 1);
-            }
+            //     }, 1);
+            // }
 
         }
 
@@ -549,9 +549,12 @@ export function cards() {
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
         if (mozilla.test(browserModel) === true) {
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 3);
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
+            }, 10);
 
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
@@ -578,18 +581,18 @@ export function cards() {
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
+                setTimeout(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
+                        $dFragm.style.top = '100vh';
                         console.log(window.scrollY)
-                        window.scrollTo(0, 0)
+                        // window.scrollTo(0, 0)
                     }
 
-                }, 1);
+                }, 500);
             }
             if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
+                setTimeout(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
                         $dFragm.style.top = '-50px';
@@ -598,14 +601,17 @@ export function cards() {
                         window.scrollTo(0, 0)
                     }
 
-                }, 1);
+                }, 500);
             }
           
         } else {
             
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
             }, 10);
 
             setInterval(() => {
@@ -631,18 +637,18 @@ export function cards() {
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
+                setTimeout(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
+                        $dFragm.style.top = '100vh';
                         console.log(window.scrollY)
-                        window.scrollTo(0, 0)
+                        // window.scrollTo(0, 0)
                     }
 
-                }, 1);
+                }, 500);
             }
             if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
+                setTimeout(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         // $dFragm.style.height = '100%';
                         $dFragm.style.top = '-50px';
@@ -651,7 +657,7 @@ export function cards() {
                         window.scrollTo(0, 0)
                     }
 
-                }, 1);
+                }, 500);
             }
 
           
@@ -686,9 +692,12 @@ export function cards() {
 
         if (mozilla.test(browserModel) === true) {
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 3);
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
+            }, 10);
 
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
@@ -740,10 +749,12 @@ export function cards() {
 
         } else {
             var $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
             }, 10);
-
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
@@ -824,11 +835,13 @@ export function cards() {
 
         if (mozilla.test(browserModel) === true) {
             console.log('Mozilla detected');
-            let $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-            }, 0.5);
-
+            var $card3_interval = setInterval(() => {
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
+            }, 10);
             setInterval(() => {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
@@ -856,8 +869,8 @@ export function cards() {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                         $dFragm.style.height = '84.5%';
                         $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
+                        console.log(window.scrollY);
+                        window.scrollTo(0, 0);
                     }
 
                 }, 1);
@@ -877,9 +890,12 @@ export function cards() {
 
 
         } else {
-            let $card3_interval = setInterval(() => {
-                $dFragm_position -= 44;
-                $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+            var $card3_interval = setInterval(() => {
+                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
+                if (window.innerWidth > 769 && window.innerHeight > 1025){
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }
             }, 10);
 
             setInterval(() => {
@@ -890,7 +906,6 @@ export function cards() {
 
              // PARA LAS DIMENSIONES DEL LAPTOP: 
 
-         
              if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
                 setInterval(() => {
                     // alert('wrg')
@@ -911,7 +926,6 @@ export function cards() {
                         console.log(window.scrollY)
                         window.scrollTo(0, 0)
                     }
-
                 }, 1);
             }
             
