@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: #f7f7f7;
     display: flex;
@@ -678,7 +679,7 @@ div[bookmark_btn_inside-bookmarked] {
     width: 150px;
     height: 40px;
     border: none;
-    margin-left: 344px;
+    margin-left: 362px;
 }
 
 .card3 div:nth-child(3) button:hover {
@@ -736,7 +737,6 @@ div[bookmark_btn_inside-bookmarked] {
 
 @media (max-width: 740px) {
     html {
-        width: 100%;
         overflow-x: hidden;
     }
     body {
@@ -744,7 +744,6 @@ div[bookmark_btn_inside-bookmarked] {
         display: flex;
         flex-direction: column;
         /* min-height: 100%; */
-        width: 100%;
         overflow-x: hidden;
     }
     /* BARRRA DE NAVEGACIÓN */
@@ -962,6 +961,8 @@ p.toggleAttribute('p-bookmarked'); */
     div[bookmark_btn_inside-bookmarked] {
         background-color: hsl(176, 50%, 36%);
     }
+
+    
     /* FIN DE LA PRIMERA SECCIÓN */
     /* INICIO DE LA SEGUNDA SECCIÓN */
     .second_section {

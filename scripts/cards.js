@@ -559,6 +559,22 @@ export function cards() {
                 }
 
             }, 1);
+
+            
+            // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+            if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -584,8 +600,9 @@ export function cards() {
 
                 }, 1);
             }
-
+          
         } else {
+            
             var $card3_interval = setInterval(() => {
                 $dFragm_position -= 44;
                 $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
@@ -596,6 +613,21 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+
+            // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+            if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -622,6 +654,7 @@ export function cards() {
                 }, 1);
             }
 
+          
         }
 
 
@@ -662,6 +695,23 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 4);
+
+            // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+            if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
+
+
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -698,7 +748,22 @@ export function cards() {
                 if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
                     clearInterval($card3_interval);
                 }
-            }, 1);
+            }, 1); 
+
+            // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+            if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
 
             // PARA LAS DIMENSIONES DE TABLET:
 
@@ -769,6 +834,21 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 0.5);
+
+             // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+             if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 1100) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -807,6 +887,20 @@ export function cards() {
                     clearInterval($card3_interval);
                 }
             }, 1);
+
+             // PARA LAS DIMENSIONES DEL LAPTOP: 
+
+         
+             if ((window.innerWidth < 1400 && window.innerWidth > 1300) ) {
+                setInterval(() => {
+                    // alert('wrg')
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
+                        clearInterval($card3_interval);
+                    }
+
+                }, 1);
+            }
+
             // PARA LAS DIMENSIONES DE TABLET:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
@@ -820,6 +914,7 @@ export function cards() {
 
                 }, 1);
             }
+            
             if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
@@ -910,7 +1005,8 @@ export function animation_btn() {
         // console.log($floating_card_zone);
 
         // AÑADIMOS EL JAVASCRIPT DEL BOTÓN DE CERRAR EN CADA EVENTO
-
+   
+       
         $close_btn.addEventListener('click', function() {
             $no_floating_card_zone.classList.add('no_floating_card_zone');
             $no_floating_card_zone.classList.remove('floating_card_zone');
@@ -918,7 +1014,10 @@ export function animation_btn() {
             // $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
             $dFragm.style.top = 950 + 'px';
             $dFragm_position = 950;
-
+            
+            // for the laptop dimension: 
+            
+         
         })
 
     });

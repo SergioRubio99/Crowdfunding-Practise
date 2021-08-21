@@ -87,3 +87,100 @@
     align-self: center;
     margin: auto;
 }
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 740px){
+
+    .floating_thank_card_zone {
+        position: fixed;
+        height: 100%;
+        width: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .no_floating_thank_card {
+        display: flex;
+        width: 500px;
+        height: 300px;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        position: fixed;
+        left: 813px;
+        top: 2000px;
+        display: none;
+    }
+    
+    .floating_thank_card {
+        display: flex;
+        margin-right: 500px;
+        flex-direction: column;
+        width: 239px;
+        height: 450px;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        position: relative;
+        top: 100px;
+        display: flex;
+    }
+    
+    .thank_image {
+        display: flex;
+        width: 73px;
+        height: 71px;
+        margin-top: 38px;
+    }
+    
+    .thank_title {
+        display: flex;
+        font-family: 'CommissionerBold';
+        font-weight: 100;
+        margin-top: 48px;
+        margin-bottom: 25px;
+        font-size: 19px;
+    }
+    
+    .thank_paragraph {
+        font-family: 'Commissioner';
+        color: rgb(104, 104, 104);
+        display: flex;
+        margin: 0px auto;
+        margin-right: 20px;
+        margin-left: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        text-align: justify;
+        margin-bottom: 35px;
+    }
+    
+    .thank_btn {
+        display: flex;
+        background-color: hsl(176, 50%, 47%);
+        color: white;
+        font-family: 'Commissioner';
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50px;
+        width: 100px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        margin-right: 20px;
+        align-self: center;
+    }
+    
+    .thank_btn:hover {
+        background-color: hsl(176, 64%, 33%);
+    }
+    
+    .thank_btn::after {
+        content: 'Got it!';
+        align-self: center;
+        margin: auto;
+    }
+    
+}
