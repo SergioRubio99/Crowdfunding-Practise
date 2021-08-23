@@ -27,9 +27,17 @@
     border: 1px solid lightgray;
     border-radius: 10px;
     position: relative;
-    left: px;
     top: 200px;
     display: flex;
+}
+
+
+/* for the laptop dimensions: */
+
+@media screen and (max-width: 1400px) and (max-height: 700px) {
+    .floating_thank_card {
+        top: 70px;
+    }
 }
 
 .thank_image {
@@ -91,15 +99,13 @@
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 740px){
-
+@media (max-width: 740px) {
     .floating_thank_card_zone {
         position: fixed;
         height: 100%;
         width: 100vh;
         background-color: rgba(0, 0, 0, 0.4);
     }
-    
     .no_floating_thank_card {
         display: flex;
         width: 500px;
@@ -112,7 +118,6 @@
         top: 2000px;
         display: none;
     }
-    
     .floating_thank_card {
         display: flex;
         margin-right: 500px;
@@ -126,14 +131,12 @@
         top: 100px;
         display: flex;
     }
-    
     .thank_image {
         display: flex;
         width: 73px;
         height: 71px;
         margin-top: 38px;
     }
-    
     .thank_title {
         display: flex;
         font-family: 'CommissionerBold';
@@ -142,7 +145,6 @@
         margin-bottom: 25px;
         font-size: 19px;
     }
-    
     .thank_paragraph {
         font-family: 'Commissioner';
         color: rgb(104, 104, 104);
@@ -155,7 +157,6 @@
         text-align: justify;
         margin-bottom: 35px;
     }
-    
     .thank_btn {
         display: flex;
         background-color: hsl(176, 50%, 47%);
@@ -172,15 +173,12 @@
         margin-right: 20px;
         align-self: center;
     }
-    
     .thank_btn:hover {
         background-color: hsl(176, 64%, 33%);
     }
-    
     .thank_btn::after {
         content: 'Got it!';
         align-self: center;
         margin: auto;
     }
-    
 }
