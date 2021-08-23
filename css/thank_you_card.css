@@ -120,7 +120,7 @@
     }
     .floating_thank_card {
         display: flex;
-        margin-right: 500px;
+        margin-right: 440px;
         flex-direction: column;
         width: 239px;
         height: 450px;
