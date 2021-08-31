@@ -706,7 +706,7 @@ background-color: rgba(0, 0, 0, 0.6); */
     .floating_card_zone {
         position: absolute;
         height: 400%;
-        width: 100vh;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.4);
     }
     /* 
@@ -718,18 +718,19 @@ background-color: rgba(0, 0, 0, 0.6); */
     background-color: rgba(0, 0, 0, 0.6); */
     /* TARJETA FLOTANTE */
     .dFragm {
-        position: auto;
         margin: 0px;
+        margin-top: 100px;
+        margin-right: 0px;
+        margin-left: 0px;
         border-radius: 10px;
         height: auto !important;
-        width: 45%;
-        margin-left: 12px;
-        margin-right: 8px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         background-color: rgb(255, 255, 255);
         border: 1px solid rgb(182, 182, 182);
         opacity: 1;
         padding-bottom: 19px;
-        /* height: 89%; */
     }
     .dFragm-main_title {
         font-size: 1.3em;
