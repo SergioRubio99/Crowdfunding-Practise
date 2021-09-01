@@ -439,7 +439,6 @@ export function cards() {
 
         if (mozilla.test(browserModel) === true) {
             if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
@@ -450,110 +449,78 @@ export function cards() {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
-
                 if (window.innerWidth < 769 && window.innerHeight < 1025) {
 
                     $dFragm.style.height = '84.5%';
                     $dFragm.style.top = '100px';
                     console.log(window.scrollY)
                         // window.scrollTo(0, 0)
-
-
-
                 }
             }
 
-            // PARA LAS DIMENSIONES DE TABLET:
-            // if (window.innerWidth < 769 && window.innerHeight < 1025) {
-            //     setInterval(() => {
-            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-            //             $dFragm.style.height = '84.5%';
-            //             $dFragm.style.top = '70px';
-            //             console.log(window.scrollY)
-            //             window.scrollTo(0, 0)
-            //         }
 
-            //     }, 1);
-            // }
-            // if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-            //     setInterval(() => {
-            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-            //             // $dFragm.style.height = '100%';
-            //             $dFragm.style.top = '-50px';
-            //             $dFragm.style.opacity = '0.96';
-            //             console.log(window.scrollY)
-            //             window.scrollTo(0, 0)
-            //         }
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
 
-            //     }, 1);
-            // }
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position -= 44;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
 
+                }, 3);
+
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
+                        clearInterval($card1_interval);
+                    }
+                }, 1);
+            }
         } else {
-            if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
+            console.log(window.innerWidth)
+            console.log(window.innerHeight)
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
                 }, 10);
 
                 setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
-
                 $dFragm.style.height = '84.5%';
                 $dFragm.style.top = '100px';
                 console.log(window.scrollY)
                     // window.scrollTo(0, 0)
-
-
-
             }
 
-            // PARA LAS DIMENSIONES DE TABLET:
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
 
-            // if (window.innerWidth < 769 && window.innerHeight < 1025) {
-            //     setInterval(() => {
-            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-            //             $dFragm.style.height = '84.5%';
-            //             $dFragm.style.top = '70px';
-            //             console.log(window.scrollY)
-            //             window.scrollTo(0, 0)
-            //         }
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position -= 22;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 7);
 
-            //     }, 1);
-            // }
-
-            // if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-            //     setInterval(() => {
-            //         if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-            //             // $dFragm.style.height = '100%';
-            //             $dFragm.style.top = '-50px';
-            //             $dFragm.style.opacity = '0.96';
-            //             console.log(window.scrollY)
-            //             window.scrollTo(0, 0)
-            //         }
-
-            //     }, 1);
-            // }
-
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
+                        clearInterval($card1_interval);
+                    }
+                }, 1);
+            }
         }
-
-        // Para cerrar la ventana con cada botón:
-
     });
 
 
@@ -584,118 +551,58 @@ export function cards() {
         let browserModel = navigator.userAgent;
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
         if (mozilla.test(browserModel) === true) {
-            var $card3_interval = setInterval(() => {
-                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
-                if (window.innerWidth > 769 && window.innerHeight > 1025) {
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
+                var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-                }
-            }, 10);
-
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
-                    clearInterval($card3_interval);
-                }
-
-            }, 1);
-
-
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
-
-
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
+                }, 10);
 
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
+                        clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setTimeout(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '100vh';
-                        console.log(window.scrollY)
-                            // window.scrollTo(0, 0)
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position += 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) > 990) {
+                        clearInterval($card1_interval);
                     }
-
-                }, 500);
-            }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setTimeout(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 500);
+                }, 1);
             }
 
         } else {
 
-            var $card3_interval = setInterval(() => {
-                // Introducimos el if para que en versiones móviles no mueva la tarjeta al top del viewport.
-                if (window.innerWidth > 769 && window.innerHeight > 1025) {
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
+                var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-                }
-            }, 10);
-
-            setInterval(() => {
-                if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                    clearInterval($card3_interval);
-                }
-            }, 1);
-
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
-
-
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
+                }, 10);
 
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
+                        clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
-
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setTimeout(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '100vh';
-                        console.log(window.scrollY)
-                            // window.scrollTo(0, 0)
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position += 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
+                setInterval(() => {
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) > 990) {
+                        clearInterval($card1_interval);
                     }
-
-                }, 500);
+                }, 1);
             }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setTimeout(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 500);
-            }
-
 
         }
 
@@ -727,23 +634,20 @@ export function cards() {
         let mozilla = /Mozilla\/5\.0 \(Windows NT 10\.0; Win64; x64; rv:90\.0\) Gecko\/20100101 Firefox\/90\.0/;
 
         if (mozilla.test(browserModel) === true) {
-            if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-
-                }, 3);
+                }, 10);
 
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
 
@@ -753,71 +657,37 @@ export function cards() {
                     $dFragm.style.top = '1400px';
                     console.log(window.scrollY)
                         // window.scrollTo(0, 0)
-
-
-
                 }
             }
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
 
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
 
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
-
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position -= 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 900) {
+                        clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
-
-
-
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 1);
-            }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 1);
-            }
-
         } else {
-            if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-
-                }, 3);
+                }, 10);
 
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
 
@@ -827,54 +697,24 @@ export function cards() {
                     $dFragm.style.top = '1400px';
                     console.log(window.scrollY)
                         // window.scrollTo(0, 0)
-
-
-
                 }
             }
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
 
 
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
 
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position -= 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 900) {
+                        clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
-
-
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 1);
-            }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 1);
-            }
-
         }
-
     });
 
 
@@ -906,97 +746,57 @@ export function cards() {
 
         if (mozilla.test(browserModel) === true) {
             console.log('Mozilla detected');
-            if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-
-                }, 3);
+                }, 10);
 
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
-
                 if (window.innerWidth < 769 && window.innerHeight < 1025) {
-
                     $dFragm.style.height = '84.5%';
                     $dFragm.style.top = '1400px';
                     console.log(window.scrollY)
                         // window.scrollTo(0, 0)
-
-
-
                 }
             }
-
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
-
-
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
-
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position += 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 1100) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) > 990) {
+                        clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
-
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY);
-                        window.scrollTo(0, 0);
-                    }
-
-                }, 1);
-            }
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
-                }, 1);
-            }
-
 
         } else {
-            if (window.innerWidth > 769 && window.innerHeight > 1025) {
-
+            if (window.innerWidth > 1200 && window.innerHeight > 700) {
                 var $card1_interval = setInterval(() => {
                     $dFragm_position -= 44;
                     $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
-
-                }, 3);
+                }, 10);
 
                 setInterval(() => {
                     if ((parseInt($dFragm.style.top.substring(0, 3))) < 80) {
                         clearInterval($card1_interval);
                     }
-
                 }, 1);
             }
 
-            // PARA LAS DIMENSIONES DE MÓVIL:
+            // ANIMACIÓN A EJECUTAR CUANDO SE DAN LAS DIMENSIONES DEL SMARTPHONE:
 
             if (window.innerWidth < 769 && window.innerHeight < 1025) {
 
@@ -1006,46 +806,18 @@ export function cards() {
                     $dFragm.style.top = '1400px';
                     console.log(window.scrollY)
                         // window.scrollTo(0, 0)
-
-
-
                 }
             }
-            // PARA LAS DIMENSIONES DEL LAPTOP: 
-
-            if ((window.innerWidth < 1400 && window.innerWidth > 1300)) {
+            // ANIMACIÓN EXCLUSIVA DE ESTE BOTÓN, PARA DIMENSIONES DE LAPTOP:
+            if (window.innerWidth === 1366) {
+                var $card1_interval = setInterval(() => {
+                    $dFragm_position += 5;
+                    $dFragm.setAttribute('style', `top:${$dFragm_position}px`);
+                }, 2);
                 setInterval(() => {
-                    // alert('wrg')
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 950) {
-                        clearInterval($card3_interval);
+                    if ((parseInt($dFragm.style.top.substring(0, 3))) > 990) {
+                        clearInterval($card1_interval);
                     }
-
-                }, 1);
-            }
-
-            // PARA LAS DIMENSIONES DE TABLET:
-
-            if (window.innerWidth < 769 && window.innerHeight < 1025) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        $dFragm.style.height = '84.5%';
-                        $dFragm.style.top = '70px';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-                }, 1);
-            }
-
-            if ((window.innerWidth < 1025 && window.innerWidth > 900) && (window.innerHeight < 769 && window.innerHeight > 500)) {
-                setInterval(() => {
-                    if ((parseInt($dFragm.style.top.substring(0, 3))) < 99) {
-                        // $dFragm.style.height = '100%';
-                        $dFragm.style.top = '-50px';
-                        $dFragm.style.opacity = '0.96';
-                        console.log(window.scrollY)
-                        window.scrollTo(0, 0)
-                    }
-
                 }, 1);
             }
 
